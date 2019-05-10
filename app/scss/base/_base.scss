@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  color: $text-color;
+  font-size: $size-text;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: $lato;
+  background-color: $white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-h;
+    font-weight: 500;
+    font-family: $releway;
+    span{
+        color: $red;
+    }  
+}
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 37px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+p {
+  margin: 0 0 35px 0;
+  span{
+    color: $red;
+}
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+input,
+button {
+  outline: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+input [type="email"],
+input [type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+}

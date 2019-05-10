@@ -1,0 +1,11 @@
+.btn{
+    padding: 14px 36px;
+    font-family: $releway;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $color-btn;
+    transition: background-color .7s ease;
+    @include hover-red;
+}
