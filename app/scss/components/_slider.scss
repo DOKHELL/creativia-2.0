@@ -1,0 +1,70 @@
+.slider__item {
+  position: relative;
+  padding: 235px 0 210px 0;
+  @include bg-fon-image;
+}
+.slider__item-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  top: 0;
+  display: block;
+}
+.slider__content {
+  z-index: 4;
+  font-size: 0;
+  text-align: center;
+  color: $white;
+  h2 {
+    color: $white;
+  }
+  p {
+    max-width: 1030px;
+    margin: 0 auto 45px;
+  }
+  a {
+    margin-right: 30px;
+  }
+}
+.slider__button {
+  margin-right: -30px;
+}
+//slick-slider
+.slick-slide {
+  outline: none;
+}
+.slick-btn {
+  position: absolute;
+  z-index: 4;
+  width: 30px;
+  height: 40px;
+  top: 50%;
+  font-family: "icomoon";
+  font-size: 35px;
+  color: $grey;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transform: translateY(-50%);
+  transition: color 0.7s;
+  &:hover {
+    color: $red;
+  }
+}
+.slick-next {
+  right: 1%;
+  &:after {
+    content: "\f054";
+  }
+}
+.slick-prev {
+  left: 1%;
+  &:after {
+    content: "\f053";
+  }
+}

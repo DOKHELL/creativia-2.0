@@ -6,6 +6,7 @@
     color: #fff;
     text-transform: uppercase;
     background-color: $color-btn;
+    outline: none;
     transition: background-color .7s ease;
     @include hover-red;
 }
