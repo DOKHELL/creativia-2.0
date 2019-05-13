@@ -23,7 +23,8 @@ h5,
 h6 {
     color: $color-h;
     font-weight: 500;
-    font-family: $releway;
+    font-family: $releway;  
+    margin-top: 0;
     span{
         color: $red;
     }  
@@ -31,11 +32,15 @@ h6 {
 h2 {
   font-weight: 700;
   font-size: 30px;
+  line-height: 36px;
+
   margin-bottom: 45px;
 }
 h3{
     font-size: 20px;
+    line-height: 24px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 p {
   margin: 0 auto 35px;

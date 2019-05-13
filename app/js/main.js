@@ -23,8 +23,16 @@ function initHolderBg() {
       }
     });
 }
-
+var mixer = mixitup('.mix-list');
+function slider2() {
+  $('.our-clints__slider').slick({
+      arrows: false,
+      dots: true,
+  });
+};
 //Runs
 $( document ).ready( slider );
 $( document ).ready( initHolderBg );
 $(document).on('click','.spoiler-trigger',function(e){e.preventDefault();$(this).toggleClass('active');$(this).parent().find('.spoiler-block').first().slideToggle(300);})
+$( document ).ready( slider2 );
+

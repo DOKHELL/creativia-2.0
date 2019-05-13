@@ -1,0 +1,67 @@
+.portfolio {
+  background-color: $color-h;
+  padding: 95px 0 110px;
+  margin-bottom: 0;
+  @extend .about__info;
+  display: block;
+  &:after {
+    background-color: $red;
+    bottom: 0;
+  }
+  &:before {
+    color: $red;
+    bottom: -10px;
+  }
+}
+.portfolio__wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  h2 {
+    color: $white;
+  }
+}
+.mix-list {
+  font-size: 0;
+  line-height: 0;
+  .mix {
+    display: inline-block;
+    position: relative;
+    a {
+      &:hover {
+          @include bg-fon-image;
+        &:after {
+            z-index: 0;
+          background-color: $bg-colorimg2;
+        }
+        &:before {
+          content: "\f067";
+          font-family: $ico;
+          font-size: 40px;
+          color: $white;
+          position: absolute;
+          z-index: 10;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.portfolio__mix-buttons {
+  margin-bottom: 95px;
+  button {
+    background-color: transparent;
+    color: $grey;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .mixitup-control-active {
+    color: $red;
+  }
+}

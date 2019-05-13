@@ -1,0 +1,123 @@
+.our-clints {
+  background-image: url("../img/our-cli-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  color: $grey;
+  text-align: center;
+  z-index: 0;
+  @include bg-fon-image;
+  &:after {
+    background-color: $bg-colorimg2;
+  }
+}
+.our-clints__wrap {
+  padding: 95px 0 100px;
+  @extend .about__info;
+  display: block;
+  margin-bottom: 0;
+  &:after {
+    background-color: $red;
+    bottom: 0;
+  }
+  &:before {
+    color: $red;
+    bottom: -10px;
+  }
+}
+.our-box__wrap {
+  h2 {
+    color: $white;
+  }
+  p {
+    font-weight: 700;
+    margin-bottom: 90px;
+  }
+}
+.our-clints__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.our-clints__reviews {
+  max-width: 570px;
+}
+.our-clints__slider-item {
+  h3 {
+    color: $white;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+}
+.our-clints__slider-img {
+  margin-bottom: 10px;
+}
+.our-clints__reviews-name {
+  text-transform: uppercase;
+  color: $red;
+  font-weight: 700;
+  font-family: $releway;
+  margin-bottom: 25px;
+}
+.slick-slide img {
+  display: inline-block;
+}
+.slick-dots {
+  position: absolute;
+  font-size: 0;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+  line-height: 0;
+  margin-right: -5px;
+  li {
+    display: inline-block;
+    padding-right: 5px;
+    button {
+      border: none;
+      outline: none;
+      padding: 0;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+.slick-dots .slick-active button {
+  background-color: $red;
+  transition: 0.3s;
+}
+.our-clints__img {
+  max-width: 570px;
+  width: 100%;
+}
+.our-clints__img {
+  display: flex;
+  flex-direction: column;
+}
+.our-clints__img-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    width: 270px;
+    height: 115px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: inset 0px 0px 102px 6px rgba(0, 0, 0, 0.67);
+    &:nth-child(1) {
+      margin-bottom: 40px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 40px;
+    }
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
