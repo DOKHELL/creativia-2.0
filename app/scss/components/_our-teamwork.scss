@@ -1,21 +1,21 @@
 .our-teamwork {
-  padding: 100px 0;
+  padding: 93px 0 100px;
   text-align: center;
-  p {
-    font-weight: 700;
-    margin-bottom: 90px;
-  }
+
 }
 .team {
-  @extend .about__info;
-  margin-bottom: 0;
+  @extend %separator;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 .team__item {
   border: 1px solid $grey-min;
   ul {
-    display: none;
     position: absolute;
     z-index: 3;
+    opacity: 0;
+    visibility: hidden;
     top: 50%;
     line-height: 0;
     width: 180px;
@@ -23,6 +23,7 @@
     width: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include transition(opacity visibility);
     li {
       display: inline-block;
       & + li {
@@ -48,38 +49,48 @@
     }
   }
   h3 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    @include transition(color);
   }
   span {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .team__item-img {
+    z-index: 0;
+    position: relative;
+    line-height: 0;
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $color-h;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      @include transition(opacity visibility);
+    }
   }
   &:hover {
-    transition: .5s;
-    border-color: $color-h;
-    ul {
-      display: inline-block;
-    }
     h3 {
       color: $red;
     }
+    ul {
+      visibility: visible;
+      opacity: 1;
+    }
     .team__item-img {
-      z-index: 0;
-      position: relative;
       &:after {
-        content: "";
-        position: absolute;
-        background-color: $color-h;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 2;
-        left: 0;
-        right: 0;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
 }
 .team__item-img {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }

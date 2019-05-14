@@ -1,7 +1,15 @@
+.slider__item .slick-slide .slick-current .slick-active{
+  .slick-initialized .slick-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .slider__item {
   position: relative;
-  padding: 235px 0 210px 0;
+  padding: 128px 0 110px 0;
   @include bg-fon-image;
+  min-height: 700px;
 }
 .slider__item-img {
   width: 100%;
@@ -21,10 +29,6 @@
   color: $white;
   h2 {
     color: $white;
-  }
-  p {
-    max-width: 1030px;
-    margin: 0 auto 45px;
   }
   a {
     margin-right: 30px;

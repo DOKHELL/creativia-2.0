@@ -1,9 +1,8 @@
 .portfolio {
   background-color: $color-h;
   padding: 95px 0 110px;
-  margin-bottom: 0;
-  @extend .about__info;
-  display: block;
+  position: relative;
+  @extend %separator;
   &:after {
     background-color: $red;
     bottom: 0;
@@ -28,22 +27,33 @@
     display: inline-block;
     position: relative;
     a {
+      @include bg-fon-image;
+      &:after,
+      &:before {
+        opacity: 0;
+        visibility: hidden;
+        @include transition(opacity visibility);
+      }
+      &:after {
+        z-index: 0;
+        background-color: $bg-colorimg2;
+      }
+      &:before {
+        content: "\f067";
+        font-family: $ico;
+        font-size: 40px;
+        color: $white;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
       &:hover {
-          @include bg-fon-image;
-        &:after {
-            z-index: 0;
-          background-color: $bg-colorimg2;
-        }
+        &:after,
         &:before {
-          content: "\f067";
-          font-family: $ico;
-          font-size: 40px;
-          color: $white;
-          position: absolute;
-          z-index: 10;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

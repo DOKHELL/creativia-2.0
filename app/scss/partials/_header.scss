@@ -33,25 +33,32 @@
     line-height: 22px;
     color: $grey;
     position: relative;
-    transition: color .9s;
+    @include transition(color);
+    &:after,&:before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      opacity: 1;
+      height: 2px;
+      background-color: $red;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(opacity visibility);
+    }
+    &:after{
+        bottom: -20px;
+    }
+    &:before {
+        top: -20px;
+    }
     &:hover {
-        color: $white;
+      color: $white;
       &:after,&:before {
-        content: "";
-        position: absolute;
-        width: 30px;
         opacity: 1;
-        height: 2px;
-        background-color: $red;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-      }
-      &:after{
-          bottom: -20px;
-      }
-      &:before {
-          top: -20px;
+        visibility: visible;
       }
     }
   }

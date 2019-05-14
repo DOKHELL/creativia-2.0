@@ -1,29 +1,29 @@
-@mixin separator {
-  &:after {
-    content: "";
-    width: 45%;
-    height: 1px;
-    bottom: -100px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: absolute;
-    background-color: $black;
-    z-index: 2;
-  }
-  &:before {
-    content: "\e902";
-    font-family: "icomoon";
-    position: absolute;
-    font-size: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: $black;
-    margin: 0 auto;
-    bottom: -110px;
-    z-index: 3;
-  }
-}
+// @mixin separator {
+//   &:after {
+//     content: "";
+//     width: 45%;
+//     height: 1px;
+//     bottom: -100px;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     position: absolute;
+//     background-color: $black;
+//     z-index: 2;
+//   }
+//   &:before {
+//     content: "\e902";
+//     font-family: "icomoon";
+//     position: absolute;
+//     font-size: 22px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     color: $black;
+//     margin: 0 auto;
+//     bottom: -110px;
+//     z-index: 3;
+//   }
+// }
 
 @mixin hover-red {
   transition: background-color 0.7s;
@@ -45,3 +45,21 @@
     right: 0;
   }
 }
+@mixin transition(
+	$properties: all,
+	$duration: .5s,
+	$method: ease,
+	$delay: 0s) {
+		$value: ();
+		@each $property in $properties {
+			@if length($value) > 0 {
+				$value: append($value, unquote(",") #{$property} $duration $method $delay);
+			}
+			@else {
+				$value: append($value, #{$property} $duration $method $delay);
+			}
+		}
+		transition: $value;
+}
+
+// @include transition(color background transform); 

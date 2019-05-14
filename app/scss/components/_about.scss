@@ -1,43 +1,36 @@
-.about{
-    padding: 80px 0;
+.about {
+  padding: 92px 0;
 }
-
-.about__title{
-    text-align: center;
-    p{
-        font-weight: 700;
-        margin-bottom: 90px;
-    }
+.about__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 208px;
+  @extend %separator;
 }
-.about__info{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 220px;
-    @include separator;
-}
-.about__content{
-    max-width: 575px;
+.about__content {
+  max-width: 575px;
 }
 //spoler
 
-.spoiler__wrap{
-    margin-bottom: 10px;
+.spoiler__wrap {
+  margin-bottom: 10px;
 }
 .spoiler-trigger {
   color: $text-color;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
-.spoiler-trigger.active {
+.spoiler__wrap.visible>.spoiler-trigger {
   color: $red;
   transition: 0.7s;
   span:before {
     content: "\f056";
   }
-  .spoiler-block{
-      display: block;
-  }
+  // .spoiler-block {
+  //   display: block;
+  // }
 }
 .spoiler-trigger > span {
   padding: 10px 0 10px 90px;
@@ -62,64 +55,51 @@
   }
 }
 .spoiler-block {
-  display: none;
   padding: 12px 20px;
   border: 1px solid #e7e7e7;
 }
-.about__skill{
+.about__skill {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
-.about__skill-item{
+.about__skill-item {
   max-width: 270px;
   position: relative;
   padding-top: 105px;
-  &:after{
-    content: "\e900";
+  color: $black;
+  p{
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: $lato;
+  }
+  &:after,&:before {
     font-family: $ico;
-    font-size: 90px;
     line-height: 80px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     display: block;
+    @include transition(color);
   }
-  &:before{
-    content: "\f004";
-    font-family: $ico;
+  &:after {
+    content: "\e900";
+    font-size: 90px;
+  }
+  &:before {
     font-size: 35px;
-    line-height: 80px;
-    position: absolute;
     z-index: 3;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
   }
-  &:hover{
-    &:after{
+  &:hover {
+    &:after {
       content: "\e902";
       color: $red;
     }
-    &:before{
+    &:before {
       color: $white;
-    }
-  }
-  &:nth-child(2){
-    &:before{
-      content: "\f046";
-    }
-  }
-  &:nth-child(3){
-    &:before{
-      content: "\f10a";
-    }
-  }
-  &:nth-child(4){
-    &:before{
-      content: "\f06d";
     }
   }
 }

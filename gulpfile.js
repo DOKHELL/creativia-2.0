@@ -32,6 +32,8 @@ gulp.task('scripts', function () {
 	return gulp.src([
 		"app/libs/slick-carousel/slick/slick.min.js",
 		"app/libs/mixitup-3/dist/mixitup.min.js",
+		"app/libs/jquery-spincrement-master/jquery.spincrement.min.js",
+		"app/libs/jquery-circle-progress-master/dist/circle-progress.min.js",
 	])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js 

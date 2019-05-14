@@ -1,19 +1,47 @@
 //Colors
 $black: #000;
 $white: #fff;
-$text-color: #505050; 
+$text-color: #505050;
 $red: #ff0036;
 $color-h: #262626;
 $color-btn: #131313;
-$bg-colorimg: rgba(0, 0, 0, .678);
-$bg-colorimg2: rgba(0, 0, 0, .9);
+$bg-colorimg: rgba(0, 0, 0, 0.678);
+$bg-colorimg2: rgba(0, 0, 0, 0.9);
 $grey: #a4a4a4;
 $grey-min: #e7e7e7;
 
 //font
-$releway: 'Raleway', sans-serif;
-$lato: 'Lato', sans-serif;
+$releway: "Raleway", sans-serif;
+$lato: "Lato", sans-serif;
 $ico: "icomoon";
 
 //fz
 $size-text: 16px;
+
+//separator
+%separator {
+  &:after {
+    content: "";
+    width: 45%;
+    height: 1px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: $black;
+    z-index: 2;
+  }
+  &:before {
+    content: "\e902";
+    font-family: "icomoon";
+    position: absolute;
+    font-size: 22px;
+    color: $black;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    bottom: -110px;
+    z-index: 3;
+  }
+}
