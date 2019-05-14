@@ -11,30 +11,30 @@
 }
 .team__item {
   border: 1px solid $grey-min;
+  @include transition(border-color);
   ul {
     position: absolute;
-    z-index: 3;
     opacity: 0;
     visibility: hidden;
     top: 50%;
     line-height: 0;
     width: 180px;
+    margin-left: -20px;
     font-size: 0;
     width: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include transition(opacity visibility);
+    z-index: 1;
+    @include transition(opacity visibility border-color);
     li {
       display: inline-block;
-      & + li {
-        padding-left: 40px;
-      }
+      padding-left: 40px;
     }
     a {
       color: $red;
       font-size: 20px;
-      z-index: 10;
       position: relative;
+      z-index: 1;
       &:after {
         content: "\e902";
         position: absolute;
@@ -49,7 +49,6 @@
     }
   }
   h3 {
-    margin-bottom: 15px;
     @include transition(color);
   }
   span {
@@ -57,7 +56,6 @@
     margin-bottom: 30px;
   }
   .team__item-img {
-    z-index: 0;
     position: relative;
     line-height: 0;
     &:after {
@@ -69,13 +67,13 @@
       opacity: 0;
       visibility: hidden;
       top: 0;
-      z-index: 2;
       left: 0;
       right: 0;
       @include transition(opacity visibility);
     }
   }
   &:hover {
+    border-color: $color-h;
     h3 {
       color: $red;
     }

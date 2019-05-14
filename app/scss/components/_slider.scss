@@ -1,4 +1,4 @@
-.slider__item .slick-slide .slick-current .slick-active{
+.slider{
   .slick-initialized .slick-slide{
     display: flex;
     justify-content: center;
@@ -23,12 +23,17 @@
   display: block;
 }
 .slider__content {
-  z-index: 4;
   font-size: 0;
   text-align: center;
   color: $white;
   h2 {
     color: $white;
+    span{
+      color: $red;
+    }
+  }
+  p{
+    font-weight: 400;
   }
   a {
     margin-right: 30px;
