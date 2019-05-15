@@ -24,7 +24,7 @@
 }
 .spoiler__wrap.visible>.spoiler-trigger {
   color: $red;
-  transition: 0.7s;
+  transition: 7s;
   span:before {
     content: "\f056";
   }
@@ -68,7 +68,7 @@
   position: relative;
   padding-top: 105px;
   color: $black;
-  p{
+  p {
     font-family: $lato;
   }
   &:after,&:before {

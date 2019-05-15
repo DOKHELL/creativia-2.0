@@ -1,5 +1,5 @@
-.slider{
-  .slick-initialized .slick-slide{
+.slider {
+  .slick-initialized .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,11 +28,11 @@
   color: $white;
   h2 {
     color: $white;
-    span{
+    span {
       color: $red;
     }
   }
-  p{
+  p {
     font-weight: 400;
   }
   a {
@@ -60,7 +60,7 @@
   cursor: pointer;
   outline: none;
   transform: translateY(-50%);
-  transition: color 0.7s;
+  transition: color .7s;
   &:hover {
     color: $red;
   }

@@ -1,83 +1,86 @@
-.our-services{
-    padding: 95px 0 100px;
-    background-color: $color-h;
-    position: relative;
-    @extend %separator;
-    &:after{
-        bottom: 0;
-        background-color: $red;
-    }
-    &:before{
-        bottom: -10px;
-        color: $red;
-    }
-    h2,h3{
-        color: $white;
-    }
-    p{
-        color: $grey;
-    }
+.our-services {
+  padding: 95px 0 100px;
+  background-color: $color-h;
+  position: relative;
+  @extend %separator;
+  &:after {
+    bottom: 0;
+    background-color: $red;
+  }
+  &:before {
+    bottom: -10px;
+    color: $red;
+  }
+  h2,
+  h3 {
+    color: $white;
+  }
+  p {
+    color: $grey;
+  }
 }
-.services__items{
-    display: flex;
-    justify-content: space-between;
+.services__items {
+  display: flex;
+  justify-content: space-between;
 }
-.services__item-left,.services__item-right{
-    max-width: 570px;
-    width: 100%;
+.services__item-left,
+.services__item-right {
+  max-width: 570px;
+  width: 100%;
 }
-.services__item{
-    max-width: 570px;
-    position: relative;
-    margin-bottom: 75px;
-    &:last-child{
-        margin-bottom: 0;
-    }
-    &:hover{
-        p{
-            color: $white;
-            background-color: $bg-p-hover;
-        }
-        &:after {
-            color: $red;
-        }
-        &:before{
-            color: $white;
-        }
-    }
-    h3{
-        font-family: $releway;
-        font-weight: 500;
-        font-size: 20px;
-        text-transform: uppercase;
-        padding-left: 100px;
-        margin-bottom: 40px;
-    }
-    p{
-        padding: 30px;
-        background-color: $bg-p;
-        color: $grey;
-        font-family: $lato;
-        @include transition (color background-color);
-    }
-    &:after,&:before {
-        font-family: $ico;
-        position: absolute;
-        top: 0;
-        line-height: 22px;
-        cursor: pointer;
-        @include transition (color);
+.services__item {
+  max-width: 570px;
+  position: relative;
+  margin-bottom: 75px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    p {
+      color: $white;
+      background-color: $bg-p-hover;
     }
     &:after {
-        content: "\e902";
-        left: 0;
-        color: $grey;
-        font-size: 65px;
+      color: $red;
     }
     &:before {
-        font-size: 35px;
-        left: 19px;
-        z-index: 1;
-        color:$color-h;
+      color: $white;
     }
+  }
+  h3 {
+    font-family: $releway;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-left: 100px;
+    margin-bottom: 40px;
+  }
+  p {
+    padding: 30px;
+    background-color: $bg-p;
+    color: $grey;
+    font-family: $lato;
+    @include transition(color background-color);
+  }
+  &:after,
+  &:before {
+    font-family: $ico;
+    position: absolute;
+    top: 0;
+    line-height: 22px;
+    cursor: pointer;
+    @include transition(color);
+  }
+  &:after {
+    content: "\e902";
+    left: 0;
+    color: $grey;
+    font-size: 65px;
+  }
+  &:before {
+    font-size: 35px;
+    left: 19px;
+    z-index: 1;
+    color: $color-h;
+  }
 }

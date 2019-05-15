@@ -1,5 +1,5 @@
 .header {
-  background-color: rgba($black, 0.5);
+  background-color: rgba($black, .5);
   position: fixed;
   left: 0;
   right: 0;
@@ -38,7 +38,6 @@
       content: "";
       position: absolute;
       width: 30px;
-      opacity: 1;
       height: 2px;
       background-color: $red;
       left: 0;
@@ -48,7 +47,7 @@
       visibility: hidden;
       @include transition(opacity visibility);
     }
-    &:after{
+    &:after {
         bottom: -20px;
     }
     &:before {

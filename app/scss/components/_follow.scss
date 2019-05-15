@@ -1,4 +1,4 @@
-.follow{
+.follow {
     padding: 100px 0 100px;
     background-image: url("../img/slider-img.jpg");
     background-repeat: no-repeat;
@@ -8,14 +8,14 @@
     z-index: 1;
     color: $white;
     @include bg-fon-image;
-    h2{
+    h2 {
         color: $white;
     }
 }
-.follow-box{
+.follow-box {
     text-align: center;
     position: relative;
-    &:after{
+    &:after {
         content: "\e900";
         font-family: $ico;
         position: absolute;
@@ -26,14 +26,14 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    a{
+    a {
         display: block;
         margin-bottom: 100px;
         position: relative;
         font-size: 40px;
         color: $red;
         height: 1px;
-        &:before{
+        &:before {
         position: absolute;
         left: 50%;
         line-height: 80px;
@@ -41,7 +41,7 @@
         transform: translateX(-50%);
     }
     }
-    span{
+    span {
         display: block;
 
     }
