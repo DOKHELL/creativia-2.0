@@ -7,6 +7,7 @@
   background-image: url("../img/our-img.png");
   background-repeat: no-repeat;
   background-position: bottom center;
+  position: relative;
   display: flex;
   justify-content: space-between;
   ul {
@@ -14,6 +15,9 @@
   }
   li {
     margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+    }
   }
   input {
     position: absolute;
@@ -64,6 +68,14 @@
     &:after {
       color: $white;
     }
+  }
+  .btn{
+    position: absolute;
+    background-color: $color-btn2;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include hover-red;
   }
 }
 .our-product__wrap-left {

@@ -1,0 +1,60 @@
+.plans{
+    padding: 105px 0 100px;
+}
+.plans__items{
+    display: flex;
+    justify-content: space-between;
+    a{
+        display: block;
+    }
+}
+.plan__item{
+    width: 270px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+        .plan__item-price{
+        background-color: $red;
+        color: $white;
+        }
+        .btn{
+           background-color: $red;
+        }
+    }
+    .plan__link{
+        border: 1px solid $grey-min;
+        padding: 17px 0;
+    }
+    .btn{
+        padding: 8px 53px;
+        @include transition(background-color);
+    }
+    h3{
+        padding: 13px 0;
+        background-color: $color-h;
+        color: $white;
+        margin-bottom: 0;
+    }
+    span{
+        padding: 17px 0;
+        border: 1px solid $grey-min;
+        color: $color-h;
+        display: block;
+    }
+    .plan__item-price{
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 60px;
+    background-color: $bg-price;
+    @include transition(background-color color);
+    sub{
+        font-size: 16px;
+        border: none;
+        padding: 0;
+        display: inline-block;
+        font-weight: 500;
+        line-height: 22px;
+    }
+}
+}

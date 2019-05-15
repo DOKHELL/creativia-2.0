@@ -1,0 +1,44 @@
+.twit{
+    background-color: $color-h;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    &:after{
+        content: "\f099";
+        font-family: $ico;
+        position: absolute;
+        left: 2%;
+        bottom: 0;
+        font-size: 220px;
+        line-height: 183px;
+        transform: rotate(-15deg);
+    }
+    p{
+        max-width: 650px;
+        margin: 0 auto;
+        color: $white;
+        font-family: $lato;
+        position: relative;
+    }
+}
+.twit__inner{
+    @extend %separator;
+    &:after{
+        bottom: 0;
+        background-color: $red;
+    }
+    &:before{
+        bottom: -10px;
+        color: $red;
+    }
+}
+.twit__wrap{ 
+    &:before{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+       color: $red;
+    }
+}
