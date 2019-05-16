@@ -24,16 +24,17 @@
                         <img src="img/logo.png" alt="">
                     </a>
                     <nav class="menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">PORTFOLIO</a></li>
-                            <li><a href="#">clients</a></li>
-                            <li><a href="#">team</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <ul class="menu-list">
+                            <li><a class="menu__link" href="#">Home</a></li>
+                            <li><a class="menu__link" href="#">about us</a></li>
+                            <li><a class="menu__link" href="#">PORTFOLIO</a></li>
+                            <li><a class="menu__link" href="#">clients</a></li>
+                            <li><a class="menu__link" href="#">team</a></li>
+                            <li><a class="menu__link" href="#">services</a></li>
+                            <li><a class="menu__link" href="#">Blog</a></li>
+                            <li><a class="menu__link" href="#">Contact</a></li>
                         </ul>
+                        <div class="iconsss"><span class="icon-bars"></span></div>
                     </nav>
                 </div>
             </div>
@@ -151,22 +152,30 @@
                     </div>
                     <div class="about__skill">
                         <a href="#" class="about__skill-item icon-heart">
-                            <h3>Flat design</h3>
+                            <div class="about__skill-matchheight">
+                                <h3>Flat design</h3>
+                            </div>
                             <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
                                 eget mauris fusce sit amet </p>
                         </a>
                         <a href="#" class="about__skill-item icon-check-square-o">
-                            <h3>Flat design</h3>
+                            <div class="about__skill-matchheight">
+                                <h3>Flat design</h3>
+                            </div>
                             <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
                                 eget mauris fusce sit amet </p>
                         </a>
                         <a href="#" class="about__skill-item icon-tablet">
-                            <h3>Flat design</h3>
+                            <div class="about__skill-matchheight">
+                                <h3>Flat design</h3>
+                            </div>
                             <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
                                 eget mauris fusce sit amet </p>
                         </a>
                         <a href="#" class="about__skill-item icon-fire">
-                            <h3>Flat design</h3>
+                            <div class="about__skill-matchheight">
+                                <h3>Flat design</h3>
+                            </div>
                             <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
                                 eget mauris fusce sit amet </p>
                         </a>
@@ -378,37 +387,40 @@
                     <div class="our-skills__statistics">
                         <div class="statistics__item">
                             <div class="statistics__item-wrap">
-                                <div class="statistics__item-number">
-                                    <span class="spincrement">90</span>%</div>
+                                <div class="preloader">
+                                    <div class="dws-progress-bar"></div>
+                                </div>
+                                <h3>Photoshop</h3>
+                                <p>Donec luctus tortor in placerat faucibus</p>
                             </div>
-                            <h3>Photoshop</h3>
-                            <p>Donec luctus tortor in placerat faucibus</p>
                         </div>
                         <div class="statistics__item">
                             <div class="statistics__item-wrap">
-                                <div class="statistics__item-number">
-                                    <span class="spincrement">60</span>%</div>
+                                <div class="preloader">
+                                    <div class="dws-progress-bar"></div>
+                                </div>
+                                <h3>Photoshop</h3>
+                                <p>Donec luctus tortor in placerat faucibus</p>
                             </div>
-                            <h3>Photoshop</h3>
-                            <p>Donec luctus tortor in placerat faucibus</p>
                         </div>
                         <div class="statistics__item">
                             <div class="statistics__item-wrap">
-                                <div class="statistics__item-number">
-                                    <span class="spincrement">40</span>%</div>
+                                <div class="preloader">
+                                    <div class="dws-progress-bar"></div>
+                                </div>
+                                <h3>Photoshop</h3>
+                                <p>Donec luctus tortor in placerat faucibus</p>
                             </div>
-                            <h3>Photoshop</h3>
-                            <p>Donec luctus tortor in placerat faucibus</p>
                         </div>
                         <div class="statistics__item">
                             <div class="statistics__item-wrap">
-                                <div class="statistics__item-number">
-                                    <span class="spincrement">70</span>%</div>
+                                <div class="preloader">
+                                    <div class="dws-progress-bar"></div>
+                                </div>
+                                <h3>Photoshop</h3>
+                                <p>Donec luctus tortor in placerat faucibus</p>
                             </div>
-                            <h3>Photoshop</h3>
-                            <p>Donec luctus tortor in placerat faucibus</p>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -594,19 +606,62 @@
                 </div>
             </section>
             <section class="follow">
-                <div class="container">
-                    <div class="title__holder">
-                        <h2>Follow <span>Creativia</span></h2>
+                <div class="follow__wrap">
+                    <div class="container">
+                        <div class="title__holder">
+                            <h2>Follow <span>Creativia</span></h2>
+                        </div>
+                        <div class="follow-box">
+                            <a class="icon-facebook-f" href="#">
+                                <span>20000</span>
+                            </a>
+                            <a class="icon-twitter" href="#">
+                                <span>99900</span>
+                            </a>
+                            <a class="icon-pinterest-p" href="#">
+                                <span>5000</span>
+                            </a>
+                            <a class="icon-fire" href="#">
+                                <span>200</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="follow-box">
-                        <a class="icon-facebook-f" href="#"></a>
-                        <span>20000</span>
+                </div>
+            </section>
+            <section class="fine-us">
+                <div class="title__holder">
+                    <h2>Fine us <span>here</span></h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur <span>adipisicing elit.</span> Deserunt, quaerat
+                        reiciendis consectetur, quasi fuga ratione adipisci labore a cum culpa eum.</p>
+                    <div class="fine-us__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756680.55318778!2d32.01105551594484!3d25.662931679164142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14450be607cb7bcd%3A0xba699162bfc01112!2z0JDRgdGM0Y7RgiwgQWwgSGFtcmFhIEF0aCBUaGFuZXlhaCwgTWFya2F6IEVsLUZhdGgsINCQ0YHRjNGO0YIsINCV0LPQuNC_0LXRgg!5e0!3m2!1sru!2sua!4v1557994724262!5m2!1sru!2sua"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <form action="" class="form">
+                            <h3>Send message</h3>
+                            <input placeholder="Name" type="text">
+                            <input placeholder="Email" type="email">
+                            <input placeholder="Subject" type="text">
+                            <textarea></textarea>
+                            <button class="btn">Submit</button>
+                        </form>
+                        <div class="fine-us__contacts-wrap">
+                            <div class="fine-us__contacts">
+                                <span>egypt, creativia</span>
+                                <address>Address: cairo 123</address>
+                                <a href="tel:+0201091915171">Phone: +0201091915171</a>
+                                <a href="mailto: gfx3mr@gmail.com"> Email: gfx3mr@gmail.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-
+            <div class="footer__inner">
+                <a>Creativia</a>
+                <p>Design by Amr Srour</p>
+            </div>
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

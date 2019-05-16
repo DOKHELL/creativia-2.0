@@ -29,6 +29,7 @@
   .btn {
     padding: 8px 53px;
     @include transition(background-color);
+    display: inline-block;
   }
   h3 {
     padding: 13px 0;

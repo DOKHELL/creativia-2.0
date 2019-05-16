@@ -1,0 +1,21 @@
+.footer{
+    background-color: $color-h;
+    color: $bg-footer;
+    font-size: 0;
+    text-align: center;
+    padding: 25px 40px;
+    a{
+        color: $bg-footer;
+        display: inline;
+        margin: 0 auto;
+        text-transform: none;
+        font-size: 30px;
+        line-height: 35px;
+        opacity: .6;
+    }
+}
+.footer__inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

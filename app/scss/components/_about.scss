@@ -14,7 +14,7 @@
 //spoler
 
 .spoiler__wrap {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .spoiler-trigger {
   color: $text-color;
@@ -24,7 +24,7 @@
 }
 .spoiler__wrap.visible>.spoiler-trigger {
   color: $red;
-  transition: 7s;
+  transition: .7s;
   span:before {
     content: "\f056";
   }
@@ -33,7 +33,7 @@
   // }
 }
 .spoiler-trigger > span {
-  padding: 10px 0 10px 90px;
+  padding: 10px 10px 10px 90px;
   font-size: 20px;
   font-weight: 500;
   position: relative;
@@ -66,7 +66,8 @@
 .about__skill-item {
   max-width: 270px;
   position: relative;
-  padding-top: 105px;
+  display: block;
+  padding-top: 110px;
   color: $black;
   p {
     font-family: $lato;
@@ -98,4 +99,11 @@
       color: $white;
     }
   }
+}
+.about__skill-matchheight{
+  h3{
+    margin: 0;
+  }
+  display: block;
+  margin-bottom: 20px;
 }

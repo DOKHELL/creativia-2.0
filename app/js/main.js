@@ -9,7 +9,7 @@ function accordion() {
   'use strict;'
   var allText = $('.about__content .spoiler-block').hide();
   $('.spoiler-trigger').on({
-    click: function(e) {
+    click: function (e) {
       e.preventDefault();
       allText.slideUp();
       $(this).parent().addClass('visible').siblings().removeClass('visible')
@@ -42,34 +42,58 @@ function slider2() {
     dots: true,
   });
 };
-$(".spincrement").spincrement();
+$(function () {
+  $('.iconsss').on('click', function () {
+    $(this).toggleClass('active');
+    $('.menu-list').toggleClass('menu-open');
+    $('menu-open').removeClass('menu-list');
+  });
+});
+function matchheight() {
+  $(".about__skill-matchheight").matchHeight();
+}
 
 //Runs
 
-$(document).ready(function(){
+$(document).ready(function () {
   accordion();
   initHolderBg();
   slider2();
   slider();
+  matchheight();
   var mixer = mixitup('.mix-list');
 });
 
+$(document).ready(function () {
+  $(".dws-progress-bar").circularProgress({
+      color: "#25ffe4",
+      line_width: 5,
+      height: "150px",
+      width: "150px",
+      percent: 0,
+      // counter_clockwise: true,
+      starting_position: 35
+  }).circularProgress('animate', 70, 3000);
+});
 
 
-var show = true;
-var countbox = ".our-skills__statistics";
-$(window).on("scroll load resize", function(){
-// if(!show) return false;                   // Отменяем показ анимации, если она уже была выполнена
-var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
-var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
-var w_height = $(window).height();        // Высота окна браузера
-var d_height = $(document).height();      // Высота всего документа
-var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-if(w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-$(".spincrement").spincrement({
-thousandSeparator: "",
-duration: 10200
-});
-show = false;
-}
-});
+
+
+
+// var show = true;
+// var countbox = ".our-skills__statistics";
+// $(window).on("scroll load resize", function () {
+//   if (!show) return false;                   // Отменяем показ анимации, если она уже была выполнена
+//   var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
+//   var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
+//   var w_height = $(window).height();        // Высота окна браузера
+//   var d_height = $(document).height();      // Высота всего документа
+//   var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+//   if (w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+//     $(".spincrement").spincrement({
+//       thousandSeparator: "",
+//       duration: 10200
+//     });
+//     show = false;
+//   }
+// });

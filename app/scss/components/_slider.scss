@@ -7,9 +7,9 @@
 }
 .slider__item {
   position: relative;
-  padding: 128px 0 110px 0;
+  padding: 28px 0 0 0;
   @include bg-fon-image;
-  min-height: 700px;
+  min-height: 693px;
 }
 .slider__item-img {
   width: 100%;
@@ -34,13 +34,17 @@
   }
   p {
     font-weight: 400;
+    margin: 0;
   }
   a {
     margin-right: 30px;
+    &:last-child{
+      margin: 0;
+    }
   }
 }
 .slider__button {
-  margin-right: -30px;
+  margin-top: 40px;
 }
 //slick-slider
 .slick-slide {

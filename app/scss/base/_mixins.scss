@@ -1,5 +1,5 @@
 @mixin hover-red {
-  transition: background-color 7s;
+  transition: background-color .7s;
   &:hover {
     background-color: $red;
   }

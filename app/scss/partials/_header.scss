@@ -1,9 +1,9 @@
 .header {
-  background-color: rgba($black, .5);
+  background-color: rgba($black, 0.5);
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10;
 }
 .header__wrap {
   display: flex;
@@ -13,28 +13,40 @@
 .logo {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 .menu {
   padding: 20px 0;
+  position: relative;
+
+  .iconsss {
+    display: none;
+    font-size: 40px;
+    color: $white;
+    right: 0;
+    z-index: 100;
+  }
   ul {
     font-size: 0;
     line-height: 0;
-    margin-left: -30px;
+    display: flex;  
+    width: 825px;
+    justify-content: space-between;
   }
   li {
-    display: inline-block;
-    padding-left: 30px;
+    // display: inline-block;
+    // padding-left: 30px;
   }
-  a {
+  .menu__link {
     text-transform: uppercase;
     font-size: 18px;
     font-family: $releway;
-    line-height: 22px;
+    line-height: 24px;
     color: $grey;
     position: relative;
     @include transition(color);
-    &:after,&:before {
+    &:after,
+    &:before {
       content: "";
       position: absolute;
       width: 30px;
@@ -48,16 +60,70 @@
       @include transition(opacity visibility);
     }
     &:after {
-        bottom: -20px;
+      bottom: -20px;
     }
     &:before {
-        top: -20px;
+      top: -20px;
     }
     &:hover {
       color: $white;
-      &:after,&:before {
+      &:after,
+      &:before {
         opacity: 1;
         visibility: visible;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1209px) {
+  .menu {
+    padding: 10px 0;
+    z-index: 10;
+    position: unset;
+    .iconsss {
+      display: inline-block;
+      cursor: pointer;
+    }
+    .menu-list {
+      // display: none;
+      pointer-events: none;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      visibility: hidden;
+      @include transition(opacity);
+    }
+    .menu-open{
+      text-align: center;
+      display: inline-block;
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      pointer-events: all;
+      right: 0;
+      left: 0;
+      top: 70px;
+      padding: 20px 50px;
+      background-color: $color-h;
+      li{
+        display: block;
+        padding: 0 0 20px 0;
+        &:last-child{
+          padding: 0;
+        }
+      }
+      a{
+        font-size: 25px;
+        line-height: 30px;
+        &:before,&:after {
+          width: 100%;
+        }
+        &:before{
+          top: -5px;
+        }
+        &:after{
+          bottom: -5px;
+        }
       }
     }
   }
