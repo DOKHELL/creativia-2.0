@@ -64,19 +64,149 @@ $(document).ready(function () {
   var mixer = mixitup('.mix-list');
 });
 
-$(document).ready(function () {
-  $(".dws-progress-bar").circularProgress({
-      color: "#25ffe4",
-      line_width: 5,
-      height: "150px",
-      width: "150px",
-      percent: 0,
-      // counter_clockwise: true,
-      starting_position: 35
-  }).circularProgress('animate', 70, 3000);
+
+var bar = new ProgressBar.Circle(preloader1, {
+  color: '#ff0036',
+  // This has to be the same size as the maximum width to
+  // prevent clipping
+  strokeWidth: 4,
+  trailWidth: 3,
+  easing: 'easeInOut',
+  duration: 7400,
+  text: {
+    autoStyleContainer: true
+  },
+  from: { color: '#ff0036', width: 5 },
+  to: { color: '#ff0036', width: 5 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+    
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 100) {
+      circle.setText(value+"%");
+      circle.stop();
+    } else {
+      circle.setText(value+"%");
+    }
+
+  }
 });
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '30px';
+
+bar.animate(0.6);  // Number from 0.0 to 1.0
 
 
+
+
+var bar = new ProgressBar.Circle(preloader2, {
+  color: '#ff0036',
+  // This has to be the same size as the maximum width to
+  // prevent clipping
+  strokeWidth: 4,
+  trailWidth: 3,
+  easing: 'easeInOut',
+  duration: 7400,
+  text: {
+    autoStyleContainer: true
+  },
+  from: { color: '#ff0036', width: 5 },
+  to: { color: '#ff0036', width: 5 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+    
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 100) {
+      circle.setText(value+"%");
+      circle.stop();
+    } else {
+      circle.setText(value+"%");
+    }
+
+  }
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '30px';
+
+bar.animate(0.9);  // Number from 0.0 to 1.0
+
+
+
+
+
+var bar = new ProgressBar.Circle(preloader3, {
+  color: '#ff0036',
+  // This has to be the same size as the maximum width to
+  // prevent clipping
+  strokeWidth: 4,
+  trailWidth: 3,
+  easing: 'easeInOut',
+  duration: 7400,
+  text: {
+    autoStyleContainer: true
+  },
+  from: { color: '#ff0036', width: 5 },
+  to: { color: '#ff0036', width: 5 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+    
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 100) {
+      circle.setText(value+"%");
+      circle.stop();
+    } else {
+      circle.setText(value+"%");
+    }
+
+  }
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '30px';
+
+bar.animate(0.7);  // Number from 0.0 to 1.0
+
+var bar = new ProgressBar.Circle(preloader4, {
+  color: '#ff0036',
+  // This has to be the same size as the maximum width to
+  // prevent clipping
+  strokeWidth: 4,
+  trailWidth: 3,
+  easing: 'easeInOut',
+  duration: 7400,
+  text: {
+    autoStyleContainer: true
+  },
+  from: { color: '#ff0036', width: 5 },
+  to: { color: '#ff0036', width: 5 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+    
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 100) {
+      circle.setText(value+"%");
+      circle.stop();
+    } else {
+      circle.setText(value+"%");
+    }
+
+  }
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '30px';
+
+bar.animate(0.5);  // Number from 0.0 to 1.0
 
 
 
