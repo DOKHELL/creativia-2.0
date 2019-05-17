@@ -2,35 +2,14 @@
   text-align: center;
   padding: 113px 0 77px;
 }
-// .statistics__items{
-//   display: flex;
-//   justify-content: space-between;
-// }
 .statistics__item {
   max-width: 170px;
   
 }
-// .statistics__item-wrap {
-//   font-size: 50px;
-//   line-height: 60px;
-//   width: 145px;
-//   margin: 0 auto 12px;
-//   height: 145px;
-//   border-radius: 50%;
-//   border: 2px solid $grey-min;
-//   position: relative;
-//   span {
-//     color: $red;
-//   }
-// }
-  // .statistics__item-number {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%,-50%);
-  // }
-
 .our-skills__statistics {
   display: flex;
   justify-content: space-around;
+}
+.preloader{
+  margin-bottom: 20px;
 }

@@ -11,6 +11,9 @@
 .about__content {
   max-width: 575px;
 }
+.about__img img{
+  width: 100%;
+}
 //spoler
 
 .spoiler__wrap {
@@ -28,9 +31,6 @@
   span:before {
     content: "\f056";
   }
-  // .spoiler-block {
-  //   display: block;
-  // }
 }
 .spoiler-trigger > span {
   padding: 10px 10px 10px 90px;
@@ -57,6 +57,7 @@
 .spoiler-block {
   padding: 12px 20px;
   border: 1px solid #e7e7e7;
+  display: none;
 }
 .about__skill {
   display: flex;
