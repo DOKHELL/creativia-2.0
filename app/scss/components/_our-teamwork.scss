@@ -6,11 +6,14 @@
 .team {
   @extend %separator;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .team__item {
   border: 1px solid $grey-min;
+  margin: 0 11px 20px;
+  max-width: 270px;
   @include transition(border-color);
   ul {
     position: absolute;

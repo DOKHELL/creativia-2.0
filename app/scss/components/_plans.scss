@@ -3,7 +3,8 @@
 }
 .plans__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   a {
     display: block;
   }
@@ -11,6 +12,7 @@
 .plan__item {
   width: 270px;
   display: block;
+  margin: 0 10px 20px;
   cursor: pointer;
   text-align: center;
   &:hover {

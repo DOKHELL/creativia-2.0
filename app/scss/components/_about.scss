@@ -61,11 +61,13 @@
 }
 .about__skill {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 .about__skill-item {
   max-width: 270px;
+  margin: 0 10px 20px;
   position: relative;
   display: block;
   padding-top: 110px;

@@ -7,7 +7,7 @@ function slider() {
 };
 
 function accordion() {
-  $('.spoiler-trigger').click(function(e){
+  $('.spoiler-trigger').click(function (e) {
     e.preventDefault();
     $(this).next(".spoiler-block").slideToggle();
     $(this).closest("div").siblings().find('.spoiler-block').slideUp();
@@ -52,11 +52,163 @@ $(function () {
 function matchheight() {
   $(".about__skill-matchheight").matchHeight();
 }
+
 function matchheight2() {
   $(".matchheight-p").matchHeight();
 }
-//Runs
 
+function progressBar1() {
+  var bar = new ProgressBar.Circle(preloader1, {
+    color: '#ff0036',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 2,
+    trailWidth: 2,
+    starting_position: 1,
+    easing: 'easeInOut',
+    duration: 9400,
+    text: {
+      autoStyleContainer: true
+    },
+    from: { color: '#ff0036', width: 2 },
+    to: { color: '#ff0036', width: 2 },
+    // Set default step function for all animate calls
+    step: function (state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
+
+        var value = Math.round(circle.value() * 100);
+        var scroll = $(window).scrollTop();
+        if (scroll <= 5100) {
+          circle.setText(value + "%");
+        }
+        else {
+          circle.setText(value + "%");
+        }
+    }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '45px';
+
+  bar.animate(0.9);  // Number from 0.0 to 1.0
+
+};
+
+function progressBar2() {
+  var bar = new ProgressBar.Circle(preloader2, {
+    color: '#ff0036',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 2,
+    trailWidth: 2,
+    easing: 'easeInOut',
+    duration: 7400,
+    text: {
+      autoStyleContainer: true
+    },
+    from: { color: '#ff0036', width: 2 },
+    to: { color: '#ff0036', width: 2 },
+    // Set default step function for all animate calls
+    step: function (state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
+
+
+      var value = Math.round(circle.value() * 100);
+        var scroll = $(window).scrollTop();
+        if (scroll <= 4000) {
+          circle.stop();
+          circle.setText(value + "%");
+        }
+        else {
+          circle.setText(value + "%");
+        }
+
+    }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '45px';
+
+  bar.animate(0.4);  // Number from 0.0 to 1.0
+};
+
+function progressBar3() {
+  var bar = new ProgressBar.Circle(preloader3, {
+    color: '#ff0036',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 2,
+    trailWidth: 2,
+    easing: 'easeInOut',
+    duration: 7400,
+    text: {
+      autoStyleContainer: true
+    },
+    from: { color: '#ff0036', width: 2 },
+    to: { color: '#ff0036', width: 2 },
+    // Set default step function for all animate calls
+    step: function (state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
+
+
+      var value = Math.round(circle.value() * 100);
+        var scroll = $(window).scrollTop();
+        if (scroll <= 4000) {
+          circle.stop();
+          circle.setText(value + "%");
+        }
+        else {
+          circle.setText(value + "%");
+        }
+
+    }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '45px';
+
+  bar.animate(0.6);  // Number from 0.0 to 1.0
+};
+
+function progressBar4() {
+  var bar = new ProgressBar.Circle(preloader4, {
+    color: '#ff0036',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 2,
+    trailWidth: 2,
+    easing: 'easeInOut',
+    duration: 7400,
+    text: {
+      autoStyleContainer: true
+    },
+    from: { color: '#ff0036', width: 2 },
+    to: { color: '#ff0036', width: 2 },
+    // Set default step function for all animate calls
+    step: function (state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
+
+      var value = Math.round(circle.value() * 100);
+        var scroll = $(window).scrollTop();
+        if (scroll <= 4000) {
+          circle.stop();
+          circle.setText(value + "%");
+        }
+        else {
+          circle.setText(value + "%");
+        }
+
+    }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '45px';
+
+  bar.animate(0.95);  // Number from 0.0 to 1.0
+};
+
+
+//Runs
 $(document).ready(function () {
   accordion();
   initHolderBg();
@@ -64,152 +216,9 @@ $(document).ready(function () {
   slider();
   matchheight();
   matchheight2();
+  progressBar1();
+  progressBar2();
+  progressBar3();
+  progressBar4();
   var mixer = mixitup('.mix-list');
 });
-
-
-var bar = new ProgressBar.Circle(preloader1, {
-  color: '#ff0036',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 2,
-  trailWidth: 2,
-  easing: 'easeInOut',
-  duration: 7400,
-  text: {
-    autoStyleContainer: true
-  },
-  from: { color: '#ff0036', width: 2 },
-  to: { color: '#ff0036', width: 2 },
-  // Set default step function for all animate calls
-  step: function (state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 100) {
-      circle.setText(value + "%");
-      circle.stop();
-    } else {
-      circle.setText(value + "%");
-    }
-
-  }
-});
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '45px';
-
-bar.animate(0.9);  // Number from 0.0 to 1.0
-
-
-
-var bar = new ProgressBar.Circle(preloader2, {
-  color: '#ff0036',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 2,
-  trailWidth: 2,
-  easing: 'easeInOut',
-  duration: 7400,
-  text: {
-    autoStyleContainer: true
-  },
-  from: { color: '#ff0036', width: 2 },
-  to: { color: '#ff0036', width: 2 },
-  // Set default step function for all animate calls
-  step: function (state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 100) {
-      circle.setText(value + "%");
-      circle.stop();
-    } else {
-      circle.setText(value + "%");
-    }
-
-  }
-});
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '45px';
-
-bar.animate(0.4);  // Number from 0.0 to 1.0
-
-
-
-
-
-var bar = new ProgressBar.Circle(preloader3, {
-  color: '#ff0036',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 2,
-  trailWidth: 2,
-  easing: 'easeInOut',
-  duration: 7400,
-  text: {
-    autoStyleContainer: true
-  },
-  from: { color: '#ff0036', width: 2 },
-  to: { color: '#ff0036', width: 2 },
-  // Set default step function for all animate calls
-  step: function (state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 100) {
-      circle.setText(value + "%");
-      circle.stop();
-    } else {
-      circle.setText(value + "%");
-    }
-
-  }
-});
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '45px';
-
-bar.animate(0.6);  // Number from 0.0 to 1.0
-
-
-
-
-
-var bar = new ProgressBar.Circle(preloader4, {
-  color: '#ff0036',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 2,
-  trailWidth: 2,
-  easing: 'easeInOut',
-  duration: 7400,
-  text: {
-    autoStyleContainer: true
-  },
-  from: { color: '#ff0036', width: 2 },
-  to: { color: '#ff0036', width: 2 },
-  // Set default step function for all animate calls
-  step: function (state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 100) {
-      circle.setText(value + "%");
-      circle.stop();
-    } else {
-      circle.setText(value + "%");
-    }
-
-  }
-});
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '45px';
-
-bar.animate(0.95);  // Number from 0.0 to 1.0

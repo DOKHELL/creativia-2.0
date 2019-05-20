@@ -4,12 +4,20 @@
 }
 .statistics__item {
   max-width: 170px;
-  
 }
 .our-skills__statistics {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width: 770px;
+  margin: 0 auto;
 }
 .preloader{
-  margin-bottom: 20px;
+  width: 150px;
+  margin: 0 auto 20px;
+}
+.preloader1,.preloader2,.preloader3,.preloader4{
+  svg{
+    width: 100px;
+    margin: 0 auto;
+  }
 }

@@ -3,6 +3,7 @@
   iframe {
     width: 100%;
     height: 570px;
+    font-size: 100%;
   }
 }
 .form {
@@ -41,6 +42,7 @@
 }
 .fine-us__map{
     position: relative;
+    line-height: 0;
 }
 .fine-us__contacts {
         background: $color-h;
@@ -48,6 +50,7 @@
         padding: 30px 90px 40px 20px;
         display: inline-block;
         max-width: 450px;
+        line-height: initial;
         position: relative;
         color: #fff;
        &:after {
@@ -80,6 +83,6 @@
 .fine-us__contacts-wrap{
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 10%;
     max-width: 500px;
 }

@@ -16,6 +16,12 @@
 }
 .footer__inner{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    position: relative;
+    .design__author{
+        position: absolute;
+        right: 0;
+        display: block;
+        font-size: 16px;
+    }
 }

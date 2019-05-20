@@ -23,6 +23,9 @@
   display: flex;
   justify-content: space-between;
 }
+.services__item-left{
+  margin-right: 15px;
+}
 .services__item-left,
 .services__item-right {
   max-width: 570px;
