@@ -7,7 +7,7 @@
 }
 .slider__item {
   position: relative;
-  padding: 28px 0 0 0;
+  padding: 28px 0 0;
   @include bg-fon-image;
   min-height: 693px;
 }
@@ -39,7 +39,7 @@
   }
   a {
     margin-right: 30px;
-    &:last-child{
+    &:last-child {
       margin: 0;
     }
   }
@@ -56,9 +56,9 @@
   z-index: 4;
   width: 30px;
   height: 40px;
-  top: 50%;
+  top: 55%;
   font-family: "icomoon";
-  font-size: 35px;
+  font-size: 31px;
   color: $grey;
   background-color: transparent;
   border: none;
@@ -71,13 +71,13 @@
   }
 }
 .slick-next {
-  right: 1%;
+  right: 2%;
   &:after {
     content: "\f054";
   }
 }
 .slick-prev {
-  left: 1%;
+  left: 2%;
   &:after {
     content: "\f053";
   }

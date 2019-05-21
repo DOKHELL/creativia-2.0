@@ -1,23 +1,38 @@
 .our-skills {
   text-align: center;
-  padding: 113px 0 77px;
+  padding: 113px 0 70px;
+  .title__holder {
+    p {
+      margin-bottom: 70px;
+    }
+  }
 }
 .statistics__item {
   max-width: 170px;
+  margin: 0 11px 20px;
 }
 .our-skills__statistics {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 770px;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
-.preloader{
+.preloader {
   width: 150px;
   margin: 0 auto 20px;
 }
-.preloader1,.preloader2,.preloader3,.preloader4{
-  svg{
+.preloader1,
+.preloader2,
+.preloader3,
+.preloader4 {
+  svg {
     width: 100px;
     margin: 0 auto;
   }
+}
+.progress-text {
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $default) {
   .menu {
     padding: 10px 0;
     z-index: 10;
@@ -30,7 +30,7 @@
       background-color: $color-h;
       li {
         display: block;
-        padding: 0 0 20px 0;
+        padding: 0 0 20px;
         &:last-child {
           padding: 0;
         }
@@ -119,11 +119,11 @@
   .team {
     justify-content: center;
   }
-  .team__item{
+  .team__item {
     margin: 0 15px 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $medium) {
   .about__img {
     display: none;
   }
@@ -157,24 +157,27 @@
     bottom: 110px;
     top: auto;
   }
-  .twit{
-    &:after{
+  .twit {
+    &:after {
       display: none;
     }
   }
-  .blog__item{
+  .blog__item {
     flex-direction: column;
     align-items: center;
     max-width: 570px;
   }
-  .blog__item-img{
+  .blog__item-img {
     align-self: flex-start;
-    img{
+    img {
       width: 100%;
     }
   }
+  .blog__item-img {
+    margin-bottom: 15px;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $small) {
   body {
     font-size: 14px;
   }
@@ -191,8 +194,8 @@
   .btn {
     font-size: 16px;
   }
-  h2{
-      font-size: 25px;
+  h2 {
+    font-size: 25px;
   }
   h3 {
     font-size: 16px;
@@ -218,16 +221,17 @@
   .portfolio {
     padding: 40px 0 110px;
   }
-  .portfolio__mix-buttons{
-      margin-bottom: 40px;
+  .portfolio__mix-buttons {
+    margin-bottom: 40px;
   }
-  .services__items{
+  .services__items {
     flex-wrap: wrap;
   }
-  .services__item-left,.services__item-right{
+  .services__item-left,
+  .services__item-right {
     margin: 0 auto;
   }
-  .services__item-left{
+  .services__item-left {
     margin-bottom: 75px;
   }
   .fine-us__contacts-wrap {
@@ -236,19 +240,21 @@
     right: 0;
     left: 0;
   }
-  .form{
+  .form {
     position: initial;
     max-width: 100%;
   }
-  .footer__inner{
+  .footer__inner {
     flex-direction: column;
-    .design__author{
-    position: initial;
+    .design__author {
+      position: initial;
+    }
   }
+  .blog__item-content p {
+    font-size: 14px;
   }
-  
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: $tiny) {
   //Slider//
   .slider__button {
     display: flex;
@@ -267,5 +273,14 @@
   }
   .logo img {
     width: 80%;
+  }
+}
+@media screen and (orientation: landscape) {
+  .menu .menu-open {
+    padding: 10px 50px;
+    top: 50px;
+    li {
+      padding: 0 0 10px;
+    }
   }
 }

@@ -1,5 +1,8 @@
 .plans {
-  padding: 105px 0 100px;
+  padding: 105px 0 80px;
+  .title__holder p {
+    margin-bottom: 70px;
+  }
 }
 .plans__items {
   display: flex;
@@ -40,7 +43,7 @@
     margin-bottom: 0;
   }
   span {
-    padding: 17px 0;
+    padding: 14px 0;
     border: 1px solid $grey-min;
     color: $color-h;
     display: block;

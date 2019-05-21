@@ -76,15 +76,13 @@ function progressBar1() {
     step: function (state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        var scroll = $(window).scrollTop();
-        if (scroll <= 5100) {
-          circle.setText(value + "%");
-        }
-        else {
-          circle.setText(value + "%");
-        }
+      var value = Math.round(circle.value() * 100);
+      if (value===100) {
+        circle.setText(value + "%");
+      }
+      else {
+        circle.setText(value + "%");
+      }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
@@ -115,9 +113,7 @@ function progressBar2() {
 
 
       var value = Math.round(circle.value() * 100);
-        var scroll = $(window).scrollTop();
-        if (scroll <= 4000) {
-          circle.stop();
+        if (value===100) {
           circle.setText(value + "%");
         }
         else {
@@ -153,9 +149,7 @@ function progressBar3() {
 
 
       var value = Math.round(circle.value() * 100);
-        var scroll = $(window).scrollTop();
-        if (scroll <= 4000) {
-          circle.stop();
+        if (value===100) {
           circle.setText(value + "%");
         }
         else {
@@ -190,9 +184,7 @@ function progressBar4() {
       circle.path.setAttribute('stroke-width', state.width);
 
       var value = Math.round(circle.value() * 100);
-        var scroll = $(window).scrollTop();
-        if (scroll <= 4000) {
-          circle.stop();
+        if (value===100) {
           circle.setText(value + "%");
         }
         else {
@@ -207,6 +199,18 @@ function progressBar4() {
   bar.animate(0.95);  // Number from 0.0 to 1.0
 };
 
+function inView() {
+  var el = document.querySelector('.our-skills')
+  var inview = InView(el, function(isInView, data) {
+    if (isInView) {
+    progressBar1();
+     progressBar2();
+     progressBar3();
+     progressBar4();
+      this.destroy()
+    }
+  })
+}
 
 //Runs
 $(document).ready(function () {
@@ -216,9 +220,6 @@ $(document).ready(function () {
   slider();
   matchheight();
   matchheight2();
-  progressBar1();
-  progressBar2();
-  progressBar3();
-  progressBar4();
+  inView();
   var mixer = mixitup('.mix-list');
 });

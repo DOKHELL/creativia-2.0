@@ -13,7 +13,7 @@
   }
 }
 .our-clints__wrap {
-  padding: 80px 0 45px;
+  padding: 82px 0 104px;
   position: relative;
   @extend %separator;
   &:after {
@@ -29,6 +29,11 @@
   h2 {
     color: $white;
   }
+  .title__holder {
+    p {
+      margin-bottom: 74px;
+    }
+  }
 }
 .our-clints__inner {
   display: flex;
@@ -40,6 +45,7 @@
 .our-clints__slider-item {
   h3 {
     color: $white;
+    margin-bottom: 40px;
   }
 }
 .our-clints__slider-img {

@@ -1,5 +1,5 @@
 .our-services {
-  padding: 72px 0 100px;
+  padding: 93px 0 100px;
   background-color: $color-h;
   position: relative;
   @extend %separator;
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
 }
-.services__item-left{
+.services__item-left {
   margin-right: 15px;
 }
 .services__item-left,
@@ -82,8 +82,10 @@
   }
   &:before {
     font-size: 35px;
-    left: 19px;
+    left: 13px;
     z-index: 1;
     color: $color-h;
+    width: 38px;
+    text-align: center;
   }
 }

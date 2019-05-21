@@ -33,7 +33,7 @@ gulp.task('scripts', function () {
 		"app/libs/slick-carousel/slick/slick.min.js",
 		"app/libs/mixitup-3/dist/mixitup.min.js",
 		"app/libs/matchHeight/jquery.matchHeight.js",
-		"app/libs/progressbar.js/dist/progressbar.min.js",
+		"app/libs/progressbar.js/dist/progressbar.js",
 	])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js 
