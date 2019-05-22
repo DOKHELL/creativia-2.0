@@ -1,4 +1,4 @@
-.fine-us {
+.find-us {
   padding-top: 100px;
   iframe {
     width: 100%;
@@ -21,6 +21,9 @@
   }
   input {
     height: 35px;
+    &:invalid{
+      border: 1px solid red;
+    }
   }
   textarea {
     height: 85px;
@@ -31,11 +34,11 @@
     font-size: 16px;
   }
 }
-.fine-us__map {
+.find-us__map {
   position: relative;
   line-height: 0;
 }
-.fine-us__contacts {
+.find-us__contacts {
   background: $color-h;
   text-align: left;
   padding: 30px 90px 40px 20px;
@@ -71,7 +74,7 @@
     margin-bottom: 5px;
   }
 }
-.fine-us__contacts-wrap {
+.find-us__contacts-wrap {
   position: absolute;
   top: 50%;
   left: 10%;

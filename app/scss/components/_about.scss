@@ -32,7 +32,7 @@
   color: $red;
   transition: .7s;
   span:before {
-    content: "\f056";
+    content: "\e909";
   }
 }
 .spoiler-trigger > span {
@@ -44,7 +44,7 @@
   background-color: #f7f7f7;
   border: 1px solid #e7e7e7;
   &:before {
-    content: "\f055";
+    content: "\e90a";
     font-family: icomoon;
     position: absolute;
     top: 50%;
@@ -67,6 +67,16 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  .icon-heart{
+    &:before{
+    font-size: 25px;
+  }
+}
+  .icon-accept{
+    &:before{
+      font-size: 35px;
+    }
+  }
 }
 .about__skill-item {
   max-width: 270px;
@@ -90,11 +100,11 @@
     @include transition(color);
   }
   &:after {
-    content: "\e900";
+    content: "\e903";
     font-size: 90px;
   }
   &:before {
-    font-size: 35px;
+    font-size: 40px;
     z-index: 3;
   }
   &:hover {

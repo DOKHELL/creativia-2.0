@@ -8,7 +8,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+ 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-accept:before {
+  content: "\e90d";
+}
+.icon-svggg .path1:before {
+  content: "\e907";
+  color: rgb(255, 255, 255);
+}
+.icon-svggg .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-polygon:before {
+  content: "\e903";
+}
 .icon-hexagon:before {
   content: "\e902";
 }
@@ -39,8 +54,20 @@
 .icon-Vector_Smart_Object:before {
   content: "\e904";
 }
+.icon-minus-circle1:before {
+  content: "\e909";
+}
+.icon-plus-circle1:before {
+  content: "\e90a";
+}
 .icon-plus1:before {
   content: "\e901";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-minus-outline:before {
+  content: "\e90c";
 }
 .icon-plus:before {
   content: "\f067";
@@ -78,6 +105,9 @@
 .icon-eye:before {
   content: "\f06e";
 }
+.icon-comment:before {
+  content: "\f075";
+}
 .icon-chevron-down:before {
   content: "\f078";
 }
@@ -101,9 +131,6 @@
 }
 .icon-reorder:before {
   content: "\f0c9";
-}
-.icon-comment-o:before {
-  content: "\f0e5";
 }
 .icon-tablet:before {
   content: "\f10a";

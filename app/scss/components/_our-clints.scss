@@ -48,6 +48,32 @@
     margin-bottom: 40px;
   }
 }
+.our-clints__slider{
+  .slick-dots {
+    position: absolute;
+    font-size: 0;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    line-height: 0;
+    margin-right: -5px;
+    li {
+      display: inline-block;
+      padding-right: 5px;
+      button {
+        border: none;
+        outline: none;
+        padding: 0;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .slick-dots .slick-active button {
+    background-color: $red;
+    transition: .3s;
+  }
+}
 .our-clints__slider-img {
   margin-bottom: 10px;
 }
@@ -60,30 +86,6 @@
 }
 .slick-slide img {
   display: inline-block;
-}
-.slick-dots {
-  position: absolute;
-  font-size: 0;
-  left: 0;
-  right: 0;
-  bottom: -25px;
-  line-height: 0;
-  margin-right: -5px;
-  li {
-    display: inline-block;
-    padding-right: 5px;
-    button {
-      border: none;
-      outline: none;
-      padding: 0;
-      width: 8px;
-      height: 8px;
-    }
-  }
-}
-.slick-dots .slick-active button {
-  background-color: $red;
-  transition: .3s;
 }
 .our-clints__img {
   max-width: 570px;

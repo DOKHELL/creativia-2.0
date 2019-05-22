@@ -1,6 +1,7 @@
 function slider() {
   $('.slider__items').slick({
     arrows: true,
+    dots: true,
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   });
@@ -56,7 +57,7 @@ function matchheight() {
 function matchheight2() {
   $(".matchheight-p").matchHeight();
 }
-
+"use strict";
 function progressBar1() {
   var bar = new ProgressBar.Circle(preloader1, {
     color: '#ff0036',
@@ -70,27 +71,33 @@ function progressBar1() {
     text: {
       autoStyleContainer: true
     },
-    from: { color: '#ff0036', width: 2 },
-    to: { color: '#ff0036', width: 2 },
+    from: {
+      color: '#ff0036',
+      width: 2
+    },
+    to: {
+      color: '#ff0036',
+      width: 2
+    },
     // Set default step function for all animate calls
-    step: function (state, circle) {
+    step: function step(state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
       var value = Math.round(circle.value() * 100);
-      if (value===100) {
+
+      if (value === 100) {
         circle.setText(value + "%");
-      }
-      else {
+      } else {
         circle.setText(value + "%");
       }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
+  bar.animate(0.9); // Number from 0.0 to 1.0
+}
 
-  bar.animate(0.9);  // Number from 0.0 to 1.0
-
-};
+;
 
 function progressBar2() {
   var bar = new ProgressBar.Circle(preloader2, {
@@ -104,29 +111,33 @@ function progressBar2() {
     text: {
       autoStyleContainer: true
     },
-    from: { color: '#ff0036', width: 2 },
-    to: { color: '#ff0036', width: 2 },
+    from: {
+      color: '#ff0036',
+      width: 2
+    },
+    to: {
+      color: '#ff0036',
+      width: 2
+    },
     // Set default step function for all animate calls
-    step: function (state, circle) {
+    step: function step(state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
-
-
       var value = Math.round(circle.value() * 100);
-        if (value===100) {
-          circle.setText(value + "%");
-        }
-        else {
-          circle.setText(value + "%");
-        }
 
+      if (value === 100) {
+        circle.setText(value + "%");
+      } else {
+        circle.setText(value + "%");
+      }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
+  bar.animate(0.4); // Number from 0.0 to 1.0
+}
 
-  bar.animate(0.4);  // Number from 0.0 to 1.0
-};
+;
 
 function progressBar3() {
   var bar = new ProgressBar.Circle(preloader3, {
@@ -140,29 +151,33 @@ function progressBar3() {
     text: {
       autoStyleContainer: true
     },
-    from: { color: '#ff0036', width: 2 },
-    to: { color: '#ff0036', width: 2 },
+    from: {
+      color: '#ff0036',
+      width: 2
+    },
+    to: {
+      color: '#ff0036',
+      width: 2
+    },
     // Set default step function for all animate calls
-    step: function (state, circle) {
+    step: function step(state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
-
-
       var value = Math.round(circle.value() * 100);
-        if (value===100) {
-          circle.setText(value + "%");
-        }
-        else {
-          circle.setText(value + "%");
-        }
 
+      if (value === 100) {
+        circle.setText(value + "%");
+      } else {
+        circle.setText(value + "%");
+      }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
+  bar.animate(0.6); // Number from 0.0 to 1.0
+}
 
-  bar.animate(0.6);  // Number from 0.0 to 1.0
-};
+;
 
 function progressBar4() {
   var bar = new ProgressBar.Circle(preloader4, {
@@ -176,34 +191,38 @@ function progressBar4() {
     text: {
       autoStyleContainer: true
     },
-    from: { color: '#ff0036', width: 2 },
-    to: { color: '#ff0036', width: 2 },
+    from: {
+      color: '#ff0036',
+      width: 2
+    },
+    to: {
+      color: '#ff0036',
+      width: 2
+    },
     // Set default step function for all animate calls
-    step: function (state, circle) {
+    step: function step(state, circle) {
       circle.path.setAttribute('stroke', state.color);
       circle.path.setAttribute('stroke-width', state.width);
-
       var value = Math.round(circle.value() * 100);
-        if (value===100) {
-          circle.setText(value + "%");
-        }
-        else {
-          circle.setText(value + "%");
-        }
 
+      if (value === 100) {
+        circle.setText(value + "%");
+      } else {
+        circle.setText(value + "%");
+      }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
+  bar.animate(0.95); // Number from 0.0 to 1.0
+}
 
-  bar.animate(0.95);  // Number from 0.0 to 1.0
-};
-
+;
 function inView() {
   var el = document.querySelector('.our-skills')
   var inview = InView(el, function(isInView, data) {
     if (isInView) {
-    progressBar1();
+      progressBar1();
      progressBar2();
      progressBar3();
      progressBar4();

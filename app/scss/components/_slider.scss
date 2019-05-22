@@ -1,15 +1,48 @@
 .slider {
+  position: relative;
   .slick-initialized .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .slider__items{
+    .slick-dots {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-right: -5px;
+      li {
+        display: inline-block;
+        padding-right: 5px;
+        button {
+          border: none;
+          outline: none;
+          padding: 0;
+          width: 14px;
+          background-color: $white;
+          border-radius: 50%;
+          height: 14px;
+        }
+      }
+    }
+    .slick-dots .slick-active button {
+      background-color: $red;
+      transition: .3s;
+    }
   }
 }
 .slider__item {
   position: relative;
   padding: 28px 0 0;
   @include bg-fon-image;
-  min-height: 693px;
+  height: 100vh;
+  padding: 50px 0;
 }
 .slider__item-img {
   width: 100%;
@@ -26,6 +59,9 @@
   font-size: 0;
   text-align: center;
   color: $white;
+  .title__holder{
+    margin-bottom: 50px;
+  }
   h2 {
     color: $white;
     span {
@@ -56,7 +92,7 @@
   z-index: 4;
   width: 30px;
   height: 40px;
-  top: 55%;
+  top: 52%;
   font-family: "icomoon";
   font-size: 31px;
   color: $grey;
@@ -69,6 +105,9 @@
   &:hover {
     color: $red;
   }
+}
+.slick-dots button{
+  background-color: #fff;
 }
 .slick-next {
   right: 2%;

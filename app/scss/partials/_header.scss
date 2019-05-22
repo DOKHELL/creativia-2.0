@@ -18,7 +18,7 @@
 .menu {
   padding: 20px 0;
   position: relative;
-
+  margin-left: 310px;
   .iconsss {
     display: none;
     font-size: 40px;
@@ -29,9 +29,11 @@
   ul {
     font-size: 0;
     line-height: 0;
-    display: flex;  
-    width: 825px;
-    justify-content: space-between;
+    margin-left: -20px;
+  }
+  li{
+    padding-left: 20px;
+    display: inline-block;
   }
   .menu__link {
     text-transform: uppercase;
