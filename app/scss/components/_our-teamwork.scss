@@ -1,12 +1,7 @@
 .our-teamwork {
   padding: 93px 0 75px;
   text-align: center;
-  .title__holder {
-    p {
-      margin-bottom: 70px;
-    }
   }
-}
 .team {
   @extend %separator;
   display: flex;

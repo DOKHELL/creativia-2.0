@@ -1,11 +1,6 @@
 .our-skills {
   text-align: center;
   padding: 113px 0 70px;
-  .title__holder {
-    p {
-      margin-bottom: 70px;
-    }
-  }
 }
 .statistics__item {
   max-width: 170px;
@@ -35,4 +30,15 @@
   font-size: 40px;
   transform: translate(-50%, -50%);
   width: 100%;
+  
+}
+.progressbar-text{
+  left: 43% !important;
+  &:after{
+    content: "%";
+    position: absolute;
+    font-size: 40px;
+    color: #000;
+    top: 3px;
+  }
 }

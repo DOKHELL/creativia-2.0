@@ -91,10 +91,20 @@
   .our-product {
     padding-bottom: 0;
   }
+  .our-product__content{
+        display: block;
+    
+  }
   .our-product__wrap {
-    background-position: 100% -60px;
-    display: block;
+    background-position: 100% -13px;
     padding: 0 0 200px;
+  }
+  .our-product__image {
+    position: absolute;
+    bottom: 38%;
+    right: 77px;
+    left: auto;
+    transform: translateX(0);
   }
   .our-product__wrap-left li:last-child {
     margin-bottom: 25px;
@@ -111,7 +121,7 @@
       }
     }
   }
-  .our-product__wrap .btn {
+  .our-product__content .btn {
     right: 83px;
     left: auto;
     bottom: auto;
@@ -123,7 +133,7 @@
   .our-clints__reviews {
     margin: 0 auto 60px;
   }
-  .our-clints__img {
+  .our-clints__image {
     margin: 0 auto;
   }
   .team {
@@ -134,7 +144,7 @@
   }
 }
 @media screen and (max-width: $medium) {
-  .about__img {
+  .about__image {
     display: none;
   }
   .about__content {
@@ -160,6 +170,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .our-product__image {
+    display: none;
   }
   .our-product__wrap .btn {
     right: 50%;
@@ -218,11 +231,11 @@
   .our-product__wrap .btn {
     font-size: 15px;
   }
-  .our-clints__img {
+  .our-clints__image {
     flex-direction: column;
     align-items: center;
   }
-  .our-clints__img-inner {
+  .our-clints__image-inner {
     margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;
@@ -237,12 +250,12 @@
   .services__items {
     flex-wrap: wrap;
   }
-  .services__item-left,
-  .services__item-right {
-    margin: 0 auto;
-  }
-  .services__item-left {
-    margin-bottom: 75px;
+  .services__item-wrap {
+    margin: 0 auto 75px;
+    &:last-child{
+      margin-bottom: 0;
+      margin-right: auto;
+    }
   }
   .find-us__contacts-wrap {
     position: absolute;

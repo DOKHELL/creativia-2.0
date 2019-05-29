@@ -23,13 +23,13 @@
   display: flex;
   justify-content: space-between;
 }
-.services__item-left {
-  margin-right: 15px;
-}
-.services__item-left,
-.services__item-right {
+.services__item-wrap{
   max-width: 570px;
   width: 100%;
+  margin-right: 20px;
+  &:last-child{
+    margin-right: 0;
+  }
 }
 .services__item {
   max-width: 570px;

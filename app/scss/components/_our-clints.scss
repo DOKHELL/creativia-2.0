@@ -29,11 +29,6 @@
   h2 {
     color: $white;
   }
-  .title__holder {
-    p {
-      margin-bottom: 74px;
-    }
-  }
 }
 .our-clints__inner {
   display: flex;
@@ -86,16 +81,18 @@
 }
 .slick-slide img {
   display: inline-block;
+  vertical-align: top;
+  margin: 0;
 }
-.our-clints__img {
+.our-clints__image {
   max-width: 570px;
   width: 100%;
 }
-.our-clints__img {
+.our-clints__image {
   display: flex;
   justify-content: space-between;
 }
-.our-clints__img-inner {
+.our-clints__image-inner {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

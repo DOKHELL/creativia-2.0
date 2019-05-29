@@ -1,8 +1,5 @@
 .plans {
   padding: 105px 0 80px;
-  .title__holder p {
-    margin-bottom: 70px;
-  }
 }
 .plans__items {
   display: flex;
@@ -34,6 +31,9 @@
   .plan__link {
     border: 1px solid $grey-min;
     padding: 17px 0;
+    span{
+      color: $white;
+    }
   }
   .btn {
     padding: 8px 53px;

@@ -1,10 +1,5 @@
 .blog {
   padding: 110px 0 85px;
-  .title__holder {
-    p {
-      margin-bottom: 65px;
-    }
-  }
 }
 .blog__items {
   padding-bottom: 15px;
@@ -49,14 +44,19 @@
 .blog__item-content {
   h3 {
     text-transform: none;
-    font-weight: 900;
+    font-weight: 600;
     max-width: 570px;
   }
   p {
     max-width: 570px;
     margin-bottom: 20px;
   }
-  ul {
+  .btn {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+}
+ .blog__item-list {
     font-size: 0;
     line-height: 0;
     margin-left: -27px;
@@ -68,19 +68,13 @@
     a {
       font-size: 12px;
       color: $grey;
-      padding-left: 19px;
+      padding-left: 21px;
       position: relative;
       &:before {
         position: absolute;
         left: 0;
-        top: -3px;
-        font-size: 16px;
+        top: -2px;
+        font-size: 17px;
       }
     }
   }
-  .btn {
-    padding: 10px 14px;
-    font-size: 16px;
-    font-family: $lato;
-  }
-}

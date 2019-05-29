@@ -39,6 +39,7 @@
       &:after {
         content: "\e902";
         color: $red;
+        font-size: 85px;
       }
       &:before {
         color: $white;
@@ -57,8 +58,8 @@
       @include transition(color);
     }
     &:after {
-      content: "\e903";
-      font-size: 80px;
+      content: "\e90e";
+      font-size: 100px;
     }
     &:before {
       font-size: 25px;

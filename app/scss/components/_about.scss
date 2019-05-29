@@ -1,5 +1,8 @@
 .about {
   padding: 92px 0 75px;
+  .title__holder{
+    margin-bottom: 95px;
+  }
 }
 .about__info {
   display: flex;
@@ -11,7 +14,7 @@
 .about__content {
   max-width: 575px;
 }
-.about__img img {
+.about__image img {
   width: 100%;
 }
 //spoler
@@ -31,11 +34,11 @@
 .spoiler__wrap.visible > .spoiler-trigger {
   color: $red;
   transition: .7s;
-  span:before {
+  &:before {
     content: "\e909";
   }
 }
-.spoiler-trigger > span {
+.spoiler-trigger{
   padding: 10px 10px 10px 90px;
   font-size: 20px;
   font-weight: 500;
@@ -100,8 +103,8 @@
     @include transition(color);
   }
   &:after {
-    content: "\e903";
-    font-size: 90px;
+    content: "\e90e";
+    font-size: 110px;
   }
   &:before {
     font-size: 40px;
@@ -111,6 +114,7 @@
     &:after {
       content: "\e902";
       color: $red;
+      font-size: 95px;
     }
     &:before {
       color: $white;

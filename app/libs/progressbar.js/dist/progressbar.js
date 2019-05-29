@@ -2435,98 +2435,100 @@
     }, {}]
   }, {}, [4])(4)
 });
-;(function (root) {
-  function throttle (fn, threshhold, scope) {
-    threshhold || (threshhold = 100)
-    var last,
-      deferTimer
+"use strict";
 
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+
+;
+"use strict";
+(function (root) {
+  function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 100);
+    var last, deferTimer;
     return function () {
-      var context = scope || this
+      var context = scope || this;
+      var now = +new Date();
+      var args = arguments;
 
-      var now = +(new Date())
-
-      var args = arguments
       if (last && now < last + threshhold) {
-        clearTimeout(deferTimer)
+        clearTimeout(deferTimer);
         deferTimer = setTimeout(function () {
-          last = now
-          fn.apply(context, args)
-        }, threshhold)
+          last = now;
+          fn.apply(context, args);
+        }, threshhold);
       } else {
-        last = now
-        fn.apply(context, args)
+        last = now;
+        fn.apply(context, args);
       }
-    }
+    };
   }
 
-  function hasClass (el, name) {
-    return new RegExp(' ' + name + ' ').test(' ' + el.className + ' ')
+  function hasClass(el, name) {
+    return new RegExp(' ' + name + ' ').test(' ' + el.className + ' ');
   }
 
-  function addClass (el, name) {
+  function addClass(el, name) {
     if (!hasClass(el, name)) {
-      el.className += ' ' + name
+      el.className += ' ' + name;
     }
-    return el
+
+    return el;
   }
 
-  function removeClass (el, name) {
-    var newClass = ' ' + el.className.replace(/[\t\r\n]/g, ' ') + ' '
+  function removeClass(el, name) {
+    var newClass = ' ' + el.className.replace(/[\t\r\n]/g, ' ') + ' ';
+
     if (hasClass(el, name)) {
       while (newClass.indexOf(' ' + name + ' ') >= 0) {
-        newClass = newClass.replace(' ' + name + ' ', ' ')
+        newClass = newClass.replace(' ' + name + ' ', ' ');
       }
-      el.className = newClass.replace(/^\s+|\s+$/g, '')
+
+      el.className = newClass.replace(/^\s+|\s+$/g, '');
     }
-    return el
+
+    return el;
   }
 
-  function removeEvent (el, name, fn) {
+  function removeEvent(el, name, fn) {
     if (el.removeEventListener) {
-      return el.removeEventListener(name, fn)
+      return el.removeEventListener(name, fn);
     } else if (el.detachEvent) {
-      return el.detachEvent('on' + name, fn)
+      return el.detachEvent('on' + name, fn);
     }
   }
 
-  function addEvent (el, name, fn) {
+  function addEvent(el, name, fn) {
     if (el.addEventListener) {
-      return el.addEventListener(name, fn, false)
+      return el.addEventListener(name, fn, false);
     } else if (el.attachEvent) {
-      return el.attachEvent('on' + name, fn)
+      return el.attachEvent('on' + name, fn);
     }
   }
 
-  function getScrollTop () {
+  function getScrollTop() {
     if (typeof window.pageYOffset !== 'undefined') {
-      return window.pageYOffset
+      return window.pageYOffset;
     } else {
-      var b = document.body
-      var d = document.documentElement
-      d = d.clientHeight ? d : b
-      return d.scrollTop
+      var b = document.body;
+      var d = document.documentElement;
+      d = d.clientHeight ? d : b;
+      return d.scrollTop;
     }
   }
 
-  function isInView (obj) {
-    var winTop = getScrollTop()
+  function isInView(obj) {
+    var winTop = getScrollTop();
+    var winBottom = winTop + window.innerHeight;
+    var objTop = obj.getBoundingClientRect().top + window.scrollY;
+    var objBottom = objTop + obj.offsetHeight;
+    var offset = 0;
 
-    var winBottom = winTop + window.innerHeight
-
-    var objTop = obj.getBoundingClientRect().top + window.scrollY
-
-    var objBottom = objTop + obj.offsetHeight
-
-    var offset = 0
-
-    if ((objTop <= winBottom + offset) && (objBottom >= winTop)) {
-      return true
+    if (objTop <= winBottom + offset && objBottom >= winTop) {
+      return true;
     }
 
-    return false
+    return false;
   }
-
   /**
    * @desc Create an InView instance.
    *
@@ -2551,54 +2553,57 @@
    *   }
    * });
    */
-  function InView (el, callback) {
-    var _this = this
-    if (!(_this instanceof InView)) {
-      return new InView(el, callback)
+
+
+  function InView(el, callback) {
+    var _this = this;
+
+    if (!_instanceof(_this, InView)) {
+      return new InView(el, callback);
     }
 
-    _this.el = el
-    _this.callback = callback.bind(_this)
-    _this.destroy = function () {}
+    _this.el = el;
+    _this.callback = callback.bind(_this);
+
+    _this.destroy = function () {};
 
     if (!el) {
-      return _this
+      return _this;
     }
 
-    var isDestroyed = false
+    var isDestroyed = false;
 
-    var check = function check (e) {
-      if (isDestroyed) return false
-
+    var check = function check(e) {
+      if (isDestroyed) return false;
       var params = {
         windowScrollTop: getScrollTop(),
         elementOffsetTop: _this.el.offsetTop,
         inViewHeight: window.innerHeight,
         elementOffsetTopInViewHeight: window.innerHeight - (getScrollTop() - (_this.el.offsetTop - window.innerHeight))
-      }
+      };
+
       if (isInView(_this.el)) {
-        addClass(_this.el, 'inview')
-        _this.callback.call(_this, true, params)
+        addClass(_this.el, 'inview');
+
+        _this.callback.call(_this, true, params);
       } else {
-        removeClass(_this.el, 'inview')
-        _this.callback.call(_this, false, params)
+        removeClass(_this.el, 'inview');
+
+        _this.callback.call(_this, false, params);
       }
-    }
+    };
 
-    var throttledCheck = throttle(check, 100)
-
-    addEvent(window, 'scroll', throttledCheck)
+    var throttledCheck = throttle(check, 100);
+    addEvent(window, 'scroll', throttledCheck);
 
     _this.destroy = function () {
-      isDestroyed = true
-      removeEvent(window, 'scroll', throttledCheck)
-    }
+      isDestroyed = true;
+      removeEvent(window, 'scroll', throttledCheck);
+    };
 
-    throttledCheck()
-
-    return _this
+    throttledCheck();
+    return _this;
   }
-
   /**
    * @desc InView callback
    *
@@ -2611,12 +2616,14 @@
    * @param {number} data.elementOffsetTopInViewHeight - element top offset relative to height of visible area
    */
 
+
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = InView
+      exports = module.exports = InView;
     }
-    exports.InView = InView
+
+    exports.InView = InView;
   } else {
-    root.InView = InView
+    root.InView = InView;
   }
 })(window);

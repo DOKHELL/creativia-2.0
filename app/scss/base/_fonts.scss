@@ -8,142 +8,146 @@
     font-weight: normal;
     font-style: normal;
   }
- 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-accept:before {
-  content: "\e90d";
-}
-.icon-svggg .path1:before {
-  content: "\e907";
-  color: rgb(255, 255, 255);
-}
-.icon-svggg .path2:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-polygon:before {
-  content: "\e903";
-}
-.icon-hexagon:before {
-  content: "\e902";
-}
-.icon-hexagon-geometrical-shape-outline:before {
-  content: "\e900";
-}
-.icon-chevron-circle-left-solid:before {
-  content: "\e905";
-}
-.icon-chevron-circle-right-solid:before {
-  content: "\e906";
-}
-.icon-Vector_Smart_Object:before {
-  content: "\e904";
-}
-.icon-minus-circle1:before {
-  content: "\e909";
-}
-.icon-plus-circle1:before {
-  content: "\e90a";
-}
-.icon-plus1:before {
-  content: "\e901";
-}
-.icon-minus:before {
-  content: "\e90b";
-}
-.icon-minus-outline:before {
-  content: "\e90c";
-}
-.icon-plus:before {
-  content: "\f067";
-}
-.icon-heart:before {
-  content: "\f004";
-}
-.icon-user:before {
-  content: "\f007";
-}
-.icon-check:before {
-  content: "\f00c";
-}
-.icon-pencil:before {
-  content: "\f040";
-}
-.icon-check-square-o:before {
-  content: "\f046";
-}
-.icon-chevron-left:before {
-  content: "\f053";
-}
-.icon-chevron-right:before {
-  content: "\f054";
-}
-.icon-plus-circle:before {
-  content: "\f055";
-}
-.icon-minus-circle:before {
-  content: "\f056";
-}
-.icon-fire:before {
-  content: "\f06d";
-}
-.icon-eye:before {
-  content: "\f06e";
-}
-.icon-comment:before {
-  content: "\f075";
-}
-.icon-chevron-down:before {
-  content: "\f078";
-}
-.icon-twitter:before {
-  content: "\f099";
-}
-.icon-facebook:before {
-  content: "\f09a";
-}
-.icon-facebook-f:before {
-  content: "\f09a";
-}
-.icon-square:before {
-  content: "\f0c8";
-}
-.icon-bars:before {
-  content: "\f0c9";
-}
-.icon-navicon:before {
-  content: "\f0c9";
-}
-.icon-reorder:before {
-  content: "\f0c9";
-}
-.icon-tablet:before {
-  content: "\f10a";
-}
-.icon-code:before {
-  content: "\f121";
-}
-.icon-html5:before {
-  content: "\f13b";
-}
-.icon-wordpress:before {
-  content: "\f19a";
-}
-.icon-pinterest-p:before {
-  content: "\f231";
-}
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-hexagon-shape-stroke-icon-by-Vexels:before {
+    content: "\e90e";
+  }
+  .icon-accept:before {
+    content: "\e90d";
+  }
+  .icon-svggg .path1:before {
+    content: "\e907";
+    color: rgb(255, 255, 255);
+  }
+  .icon-svggg .path2:before {
+    content: "\e908";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .icon-polygon:before {
+    content: "\e903";
+  }
+  .icon-hexagon:before {
+    content: "\e902";
+  }
+  .icon-hexagon-geometrical-shape-outline:before {
+    content: "\e900";
+  }
+  .icon-chevron-circle-left-solid:before {
+    content: "\e905";
+  }
+  .icon-chevron-circle-right-solid:before {
+    content: "\e906";
+  }
+  .icon-Vector_Smart_Object:before {
+    content: "\e904";
+  }
+  .icon-minus-circle1:before {
+    content: "\e909";
+  }
+  .icon-plus-circle1:before {
+    content: "\e90a";
+  }
+  .icon-plus1:before {
+    content: "\e901";
+  }
+  .icon-minus:before {
+    content: "\e90b";
+  }
+  .icon-minus-outline:before {
+    content: "\e90c";
+  }
+  .icon-plus:before {
+    content: "\f067";
+  }
+  .icon-heart:before {
+    content: "\f004";
+  }
+  .icon-user:before {
+    content: "\f007";
+  }
+  .icon-check:before {
+    content: "\f00c";
+  }
+  .icon-pencil:before {
+    content: "\f040";
+  }
+  .icon-check-square-o:before {
+    content: "\f046";
+  }
+  .icon-chevron-left:before {
+    content: "\f053";
+  }
+  .icon-chevron-right:before {
+    content: "\f054";
+  }
+  .icon-plus-circle:before {
+    content: "\f055";
+  }
+  .icon-minus-circle:before {
+    content: "\f056";
+  }
+  .icon-fire:before {
+    content: "\f06d";
+  }
+  .icon-eye:before {
+    content: "\f06e";
+  }
+  .icon-comment:before {
+    content: "\f075";
+  }
+  .icon-chevron-down:before {
+    content: "\f078";
+  }
+  .icon-twitter:before {
+    content: "\f099";
+  }
+  .icon-facebook:before {
+    content: "\f09a";
+  }
+  .icon-facebook-f:before {
+    content: "\f09a";
+  }
+  .icon-square:before {
+    content: "\f0c8";
+  }
+  .icon-bars:before {
+    content: "\f0c9";
+  }
+  .icon-navicon:before {
+    content: "\f0c9";
+  }
+  .icon-reorder:before {
+    content: "\f0c9";
+  }
+  .icon-tablet:before {
+    content: "\f10a";
+  }
+  .icon-code:before {
+    content: "\f121";
+  }
+  .icon-html5:before {
+    content: "\f13b";
+  }
+  .icon-wordpress:before {
+    content: "\f19a";
+  }
+  .icon-pinterest-p:before {
+    content: "\f231";
+  }
+  

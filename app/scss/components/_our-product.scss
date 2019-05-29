@@ -2,14 +2,22 @@
   text-align: center;
   padding: 95px 0 110px;
 }
+.our-product__content{
+   display: flex;
+  justify-content: space-between;
+}
+.our-product__image{
+  position: absolute;
+  bottom: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .our-product__wrap {
-  padding: 130px 0 300px;
+  padding: 90px 0 300px;
   background-image: url("../img/our-img.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   position: relative;
-  display: flex;
-  justify-content: space-between;
   ul {
     max-width: 370px;
   }

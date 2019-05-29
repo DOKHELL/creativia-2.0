@@ -86,18 +86,16 @@ function progressBar1() {
       var value = Math.round(circle.value() * 100);
 
       if (value === 100) {
-        circle.setText(value + "%");
+        circle.setText(value);
       } else {
-        circle.setText(value + "%");
+        circle.setText(value);
       }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
   bar.animate(0.9); // Number from 0.0 to 1.0
-}
-
-;
+};
 
 function progressBar2() {
   var bar = new ProgressBar.Circle(preloader2, {
@@ -126,18 +124,16 @@ function progressBar2() {
       var value = Math.round(circle.value() * 100);
 
       if (value === 100) {
-        circle.setText(value + "%");
+        circle.setText(value);
       } else {
-        circle.setText(value + "%");
+        circle.setText(value);
       }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
   bar.animate(0.4); // Number from 0.0 to 1.0
-}
-
-;
+};
 
 function progressBar3() {
   var bar = new ProgressBar.Circle(preloader3, {
@@ -166,18 +162,16 @@ function progressBar3() {
       var value = Math.round(circle.value() * 100);
 
       if (value === 100) {
-        circle.setText(value + "%");
+        circle.setText(value );
       } else {
-        circle.setText(value + "%");
+        circle.setText(value );
       }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
   bar.animate(0.6); // Number from 0.0 to 1.0
-}
-
-;
+};
 
 function progressBar4() {
   var bar = new ProgressBar.Circle(preloader4, {
@@ -206,18 +200,17 @@ function progressBar4() {
       var value = Math.round(circle.value() * 100);
 
       if (value === 100) {
-        circle.setText(value + "%");
+        circle.setText(value );
       } else {
-        circle.setText(value + "%");
+        circle.setText(value );
       }
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '45px';
   bar.animate(0.95); // Number from 0.0 to 1.0
-}
-
-;
+};
+"use strict";
 function inView() {
   var el = document.querySelector('.our-skills')
   var inview = InView(el, function(isInView, data) {
@@ -231,7 +224,9 @@ function inView() {
   })
 }
 
+
 //Runs
+"use strict";
 $(document).ready(function () {
   accordion();
   initHolderBg();
@@ -242,3 +237,12 @@ $(document).ready(function () {
   inView();
   var mixer = mixitup('.mix-list');
 });
+
+if (!!navigator.userAgent.match(/Trident\/7\./)){
+  $(document).ready(function () {
+    progressBar1()
+    progressBar2()
+    progressBar3()
+    progressBar4()
+  });
+  }
