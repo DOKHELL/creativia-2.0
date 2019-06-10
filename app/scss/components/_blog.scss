@@ -1,14 +1,15 @@
 .blog {
-  padding: 110px 0 85px;
+  padding: 110px 0 95px;
+  position: relative;
 }
 .blog__items {
-  padding-bottom: 15px;
-  position: relative;
+  margin: 0 auto;
+  max-width: 970px;
   .arrow-blog {
     &:before,
     &:after {
       position: absolute;
-      bottom: 0;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -24,16 +25,15 @@
       font-family: $ico;
       font-size: 25px;
       color: $grey-so;
-      bottom: 10px;
+      bottom: 40px;
     }
   }
 }
 .blog__item {
   display: flex;
-  max-width: 970px;
-  margin: 0 auto 50px;
+  margin-bottom: 50px;
   justify-content: space-between;
-  &:last-child {
+  &:last-of-type{
     margin-bottom: 0;
   }
 }

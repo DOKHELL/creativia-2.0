@@ -4,11 +4,9 @@
   position: relative;
   @extend %separator;
   &:after {
-    bottom: 0;
     background-color: $red;
   }
   &:before {
-    bottom: -10px;
     color: $red;
   }
   h2,

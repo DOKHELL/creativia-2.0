@@ -1,9 +1,10 @@
 .our-teamwork {
   padding: 93px 0 75px;
   text-align: center;
+  @extend %separator;
+  position: relative;
   }
 .team {
-  @extend %separator;
   display: flex;
   justify-content: center;
   position: relative;
@@ -37,6 +38,9 @@
       font-size: 20px;
       position: relative;
       z-index: 1;
+      &:hover{
+        opacity: .9;
+      }
       &:after {
         content: "\e902";
         position: absolute;

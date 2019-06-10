@@ -5,11 +5,9 @@
   @extend %separator;
   &:after {
     background-color: $red;
-    bottom: 0;
   }
   &:before {
     color: $red;
-    bottom: -10px;
   }
 }
 .portfolio__wrap {
