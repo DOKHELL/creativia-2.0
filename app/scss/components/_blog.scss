@@ -22,8 +22,7 @@
     }
     &:after {
       content: "\f078";
-      font-family: $ico;
-      font-size: 25px;
+      font: 25px $ico;
       color: $grey-so;
       bottom: 40px;
     }
@@ -70,6 +69,10 @@
       color: $grey;
       padding-left: 21px;
       position: relative;
+      transition: color .7s;
+      &:hover{
+        color: $color-h;
+      }
       &:before {
         position: absolute;
         left: 0;

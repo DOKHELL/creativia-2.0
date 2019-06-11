@@ -1,5 +1,5 @@
 .follow {
-  padding: 100px 0 67px;
+  padding: 98px 0 70px;
   background-image: url("../img/slider-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,6 +21,9 @@
   &:before {
     color: $red;
   }
+  .title__holder{
+    margin-bottom: 40px;
+  }
 }
 .follow-box {
   a {
@@ -37,7 +40,7 @@
       &:after {
         content: "\e902";
         color: $red;
-        font-size: 85px;
+        font-size: 75px;
       }
       &:before {
         color: $white;
@@ -57,7 +60,7 @@
     }
     &:after {
       content: "\e90e";
-      font-size: 100px;
+      font-size: 90px;
     }
     &:before {
       font-size: 25px;

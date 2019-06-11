@@ -57,7 +57,6 @@ function matchheight() {
 function matchheight2() {
   $(".matchheight-p").matchHeight();
 }
-"use strict";
 function progressBar1() {
   var bar = new ProgressBar.Circle(preloader1, {
     color: '#ff0036',
@@ -210,7 +209,6 @@ function progressBar4() {
   bar.text.style.fontSize = '45px';
   bar.animate(0.95); // Number from 0.0 to 1.0
 };
-"use strict";
 function inView() {
   var el = document.querySelector('.our-skills')
   var inview = InView(el, function(isInView, data) {
@@ -226,7 +224,6 @@ function inView() {
 
 
 //Runs
-"use strict";
 $(document).ready(function () {
   accordion();
   initHolderBg();

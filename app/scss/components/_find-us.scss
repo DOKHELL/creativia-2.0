@@ -10,7 +10,7 @@
   max-width: 470px;
   background-color: $white;
   padding: 53px 45px;
-  box-shadow: 0 0 47px -25px rgba(0, 0, 0, .57);
+  box-shadow: $shadow;
   text-align: right;
   position: absolute;
   left: 50%;
@@ -20,7 +20,7 @@
     margin-bottom: 45px;
   }
   input {
-    &:invalid{
+    &:invalid {
       border: 1px solid red;
     }
   }
@@ -49,18 +49,19 @@
   &:after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -5px;
     bottom: -20px;
-    border: 30px solid transparent;
-    border-left: 79px solid $color-h;
-    border-right: 0 solid $color-h;
-    border-top: 0 solid $color-h;
-    transform: rotate(140deg);
+    width: 25px;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0px 0 79px;
+    border-color: $color-h transparent transparent transparent;
+    transform: rotate(-47deg);
   }
-  dt{
+  dt {
     display: inline-block;
   }
-  dd{
+  dd {
     display: inline-block;
     margin: 0;
   }

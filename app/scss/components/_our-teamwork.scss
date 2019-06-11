@@ -12,10 +12,16 @@
 }
 .team__item {
   border: 1px solid $grey-min;
-  margin: 0 11px 20px;
+  margin: 0 15px 20px;
   max-width: 270px;
   width: 100%;
   @include transition(border-color);
+  &:last-of-type{
+    margin-right: 0;
+  }
+  &:first-of-type{
+    margin-left: 0;
+  }
   ul {
     position: absolute;
     opacity: 0;
@@ -38,8 +44,9 @@
       font-size: 20px;
       position: relative;
       z-index: 1;
+      transition: opacity .6s;
       &:hover{
-        opacity: .9;
+        opacity: .7;
       }
       &:after {
         content: "\e902";
@@ -97,4 +104,7 @@
 }
 .team__item-img {
   margin-bottom: 30px;
+  img{
+    width: 100%;
+  }
 }

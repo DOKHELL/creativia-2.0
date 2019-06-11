@@ -15,6 +15,7 @@ $color-btn2 : #393939;
 $grey-min: #e7e7e7;
 $bg-price: #f2f2f2;
 $bg-footer: #8e8e8e;
+$shadow: 0 0 47px -25px rgba(0, 0, 0, .57);
 
 //font
 $releway: "Raleway", sans-serif;
@@ -28,7 +29,7 @@ $size-text: 16px;
 %separator {
   &:after {
     content: "";
-    width: 45%;
+    width: 27%;
     height: 1px;
     bottom: 0;
     left: 0;

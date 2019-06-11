@@ -11,6 +11,9 @@
   margin-bottom: 100px;
   padding-bottom: 100px;
   @extend %separator;
+  &:after{
+    width: 44%;
+  }
 }
 .about__content {
   max-width: 575px;

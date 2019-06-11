@@ -4,7 +4,13 @@
 }
 .statistics__item {
   max-width: 170px;
-  margin: 0 11px 20px;
+  margin: 0 15px 20px;
+  &:last-of-type{
+    margin-right: 0;
+  }
+  &:first-of-type{
+    margin-left: 0;
+  }
 }
 .our-skills__statistics {
   display: flex;
